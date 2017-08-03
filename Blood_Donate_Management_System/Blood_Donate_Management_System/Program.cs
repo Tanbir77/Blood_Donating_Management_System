@@ -20,6 +20,7 @@ namespace Blood_Donate_Management_System
            
             Console.WriteLine("Hi tanbir");
             Console.WriteLine("Hi rahadi");
+            Console.WriteLine("Masud");
         }
     }
 }

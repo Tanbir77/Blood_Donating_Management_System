@@ -13,7 +13,6 @@ namespace Blood_Donate_Management_System
         public Form1()
         {
             InitializeComponent();
-            initializeImagesPath();
             ShowCoverImages();
         }
 
@@ -21,37 +20,36 @@ namespace Blood_Donate_Management_System
         {
              timer1 = new System.Windows.Forms.Timer();
              timer1.Tick += new EventHandler(timer1_Tick);
-             pictureBox1.Load($"BloodDonation{counter++}.jpg");
+             pictureBox1.Load($"Images/BloodDonation{counter++}.jpg");
              pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-             timer1.Interval = 4000; // 3 second
+             timer1.Interval = 6000; // 5 second
              timer1.Start();
             //
             
             
         }
 
-        private void initializeImagesPath()
-        {
-            int count = 0;
-            while (count < 3)
-            {
-                imagePaths[count]=$"BloodDonation{count}.jpg";
-                count++;
-            }
-        }
+
 
         private void timer1_Tick(object sender, EventArgs e)
         {
            
-            if (counter == 3)
+            if (counter ==12)
             {
                 timer1.Stop();
                 counter = 0;
                 timer1.Start();
                 
             }
-            pictureBox1.Load($"BloodDonation{counter++}.jpg") ;
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            try
+            {
+                pictureBox1.Load($"Images/BloodDonation{counter++}.jpg");
+                pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            }catch(Exception ex)
+            {
+                MessageBox.Show("You delete this image from Images file");
+            }
+          
             
         }
 

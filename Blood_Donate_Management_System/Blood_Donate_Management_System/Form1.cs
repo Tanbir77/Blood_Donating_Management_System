@@ -25,6 +25,7 @@ namespace Blood_Donate_Management_System
              pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
              timer1.Interval = 4000; // 3 second
              timer1.Start();
+            //
             
             
         }

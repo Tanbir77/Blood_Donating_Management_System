@@ -13,7 +13,7 @@ namespace Blood_Donate_Management_System
         public Form1()
         {
             InitializeComponent();
-            ShowCoverImages();
+           // ShowCoverImages();
         }
 
         private void ShowCoverImages()

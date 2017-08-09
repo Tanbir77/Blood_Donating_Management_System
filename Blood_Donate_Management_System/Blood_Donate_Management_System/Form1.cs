@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.Timers;
 
 using System.Windows.Forms;
@@ -53,6 +54,24 @@ namespace Blood_Donate_Management_System
             
         }
 
-  
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dhakaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
     }
 }

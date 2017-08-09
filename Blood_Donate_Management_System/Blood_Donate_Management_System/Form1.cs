@@ -22,9 +22,9 @@ namespace Blood_Donate_Management_System
              timer1.Tick += new EventHandler(timer1_Tick);
              pictureBox1.Load($"Images/BloodDonation{counter++}.jpg");
              pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-             timer1.Interval = 6000; // 5 second
+             timer1.Interval = 5000; // 5 second
              timer1.Start();
-            //
+            
             
             
         }

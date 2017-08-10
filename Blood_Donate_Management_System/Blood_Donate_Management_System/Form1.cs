@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace Blood_Donate_Management_System
 {
-    public partial class Form1 : Form
+    public partial class Form1 : MetroFramework.Forms.MetroForm
     {
         private System.Windows.Forms.Timer timer1;
         private int counter = 0;
@@ -54,24 +54,28 @@ namespace Blood_Donate_Management_System
             
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dhakaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
 
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroButton1_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void OnMouseEnterButton1(object sender, EventArgs e)
+        {
+            metroButton1.BackColor = System.Drawing.Color.DarkSlateBlue;
+        }
+        private void OnMouseLeaveButton1(object sender, EventArgs e)
+        {
+            metroButton1.BackColor = SystemColors.ButtonFace;
+        }
     }
+}
 }

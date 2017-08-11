@@ -56,9 +56,9 @@ namespace Blood_Donate_Management_System
             // panel1
             // 
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Location = new System.Drawing.Point(0, 84);
+            this.panel1.Location = new System.Drawing.Point(3, 88);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(680, 396);
+            this.panel1.Size = new System.Drawing.Size(680, 385);
             this.panel1.TabIndex = 0;
             // 
             // pictureBox1
@@ -66,7 +66,7 @@ namespace Blood_Donate_Management_System
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(680, 396);
+            this.pictureBox1.Size = new System.Drawing.Size(680, 385);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
@@ -80,7 +80,7 @@ namespace Blood_Donate_Management_System
             this.panel2.Controls.Add(this.metroButton2);
             this.panel2.Controls.Add(this.menuStrip1);
             this.panel2.Controls.Add(this.metroButton1);
-            this.panel2.Location = new System.Drawing.Point(-3, 49);
+            this.panel2.Location = new System.Drawing.Point(0, 54);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(683, 33);
             this.panel2.TabIndex = 1;
@@ -91,7 +91,7 @@ namespace Blood_Donate_Management_System
             this.metroButton5.FontSize = MetroFramework.MetroButtonSize.Medium;
             this.metroButton5.FontWeight = MetroFramework.MetroButtonWeight.Regular;
             this.metroButton5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.metroButton5.Location = new System.Drawing.Point(595, 0);
+            this.metroButton5.Location = new System.Drawing.Point(595, -1);
             this.metroButton5.Name = "metroButton5";
             this.metroButton5.Size = new System.Drawing.Size(88, 35);
             this.metroButton5.TabIndex = 6;
@@ -139,10 +139,10 @@ namespace Blood_Donate_Management_System
             this.metroButton2.FontSize = MetroFramework.MetroButtonSize.Medium;
             this.metroButton2.FontWeight = MetroFramework.MetroButtonWeight.Regular;
             this.metroButton2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.metroButton2.Location = new System.Drawing.Point(87, 0);
+            this.metroButton2.Location = new System.Drawing.Point(89, -2);
             this.metroButton2.Margin = new System.Windows.Forms.Padding(0);
             this.metroButton2.Name = "metroButton2";
-            this.metroButton2.Size = new System.Drawing.Size(96, 33);
+            this.metroButton2.Size = new System.Drawing.Size(92, 36);
             this.metroButton2.TabIndex = 6;
             this.metroButton2.Text = "About";
             this.metroButton2.UseCustomBackColor = true;
@@ -166,7 +166,11 @@ namespace Blood_Donate_Management_System
             // 
             // toolStripMenuItem1
             // 
+            this.toolStripMenuItem1.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.toolStripMenuItem1.AutoSize = false;
             this.toolStripMenuItem1.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.toolStripMenuItem1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.toolStripMenuItem1.CheckOnClick = true;
             this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.dhakaToolStripMenuItem,
             this.khulnaToolStripMenuItem,
@@ -186,7 +190,7 @@ namespace Blood_Donate_Management_System
             this.dhakaToolStripMenuItem.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.dhakaToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.dhakaToolStripMenuItem.Name = "dhakaToolStripMenuItem";
-            this.dhakaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.dhakaToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.dhakaToolStripMenuItem.Text = "Dhaka";
             // 
             // khulnaToolStripMenuItem
@@ -194,7 +198,7 @@ namespace Blood_Donate_Management_System
             this.khulnaToolStripMenuItem.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.khulnaToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.khulnaToolStripMenuItem.Name = "khulnaToolStripMenuItem";
-            this.khulnaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.khulnaToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.khulnaToolStripMenuItem.Text = "Khulna";
             // 
             // chittagongToolStripMenuItem
@@ -202,7 +206,7 @@ namespace Blood_Donate_Management_System
             this.chittagongToolStripMenuItem.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.chittagongToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.chittagongToolStripMenuItem.Name = "chittagongToolStripMenuItem";
-            this.chittagongToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.chittagongToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.chittagongToolStripMenuItem.Text = "Chittagong";
             // 
             // sylhetToolStripMenuItem
@@ -212,13 +216,14 @@ namespace Blood_Donate_Management_System
             this.sylhetToolStripMenuItem.Name = "sylhetToolStripMenuItem";
             this.sylhetToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.sylhetToolStripMenuItem.Text = "Sylhet";
+            this.sylhetToolStripMenuItem.Click += new System.EventHandler(this.sylhetToolStripMenuItem_Click);
             // 
             // rajshahiToolStripMenuItem
             // 
             this.rajshahiToolStripMenuItem.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.rajshahiToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.rajshahiToolStripMenuItem.Name = "rajshahiToolStripMenuItem";
-            this.rajshahiToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.rajshahiToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.rajshahiToolStripMenuItem.Text = "Rajshahi";
             // 
             // barisalToolStripMenuItem
@@ -226,7 +231,7 @@ namespace Blood_Donate_Management_System
             this.barisalToolStripMenuItem.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.barisalToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.barisalToolStripMenuItem.Name = "barisalToolStripMenuItem";
-            this.barisalToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.barisalToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.barisalToolStripMenuItem.Text = "Barisal";
             // 
             // rangpurToolStripMenuItem
@@ -234,7 +239,7 @@ namespace Blood_Donate_Management_System
             this.rangpurToolStripMenuItem.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.rangpurToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.rangpurToolStripMenuItem.Name = "rangpurToolStripMenuItem";
-            this.rangpurToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.rangpurToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.rangpurToolStripMenuItem.Text = "Rangpur";
             // 
             // metroButton1
@@ -243,7 +248,7 @@ namespace Blood_Donate_Management_System
             this.metroButton1.FontSize = MetroFramework.MetroButtonSize.Medium;
             this.metroButton1.FontWeight = MetroFramework.MetroButtonWeight.Regular;
             this.metroButton1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.metroButton1.Location = new System.Drawing.Point(3, -2);
+            this.metroButton1.Location = new System.Drawing.Point(1, -1);
             this.metroButton1.Name = "metroButton1";
             this.metroButton1.Size = new System.Drawing.Size(88, 35);
             this.metroButton1.TabIndex = 4;
@@ -253,8 +258,6 @@ namespace Blood_Donate_Management_System
             this.metroButton1.UseSelectable = true;
             this.metroButton1.UseStyleColors = true;
             this.metroButton1.Click += new System.EventHandler(this.metroButton1_Click);
-            metroButton1.MouseEnter += OnMouseEnterButton1;
-            metroButton1.MouseLeave += OnMouseLeaveButton1;
             // 
             // Form1
             // 
@@ -284,16 +287,11 @@ namespace Blood_Donate_Management_System
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.ToolStripMenuItem hiToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem hiiToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem hiiToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem hhhhToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem searchDonorToolStripMenuItem;
+
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel2;
         private MetroFramework.Controls.MetroButton metroButton1;
         private MetroFramework.Controls.MetroButton metroButton2;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem dhakaToolStripMenuItem;
@@ -306,7 +304,6 @@ namespace Blood_Donate_Management_System
         private MetroFramework.Controls.MetroButton metroButton5;
         private MetroFramework.Controls.MetroButton metroButton4;
         private MetroFramework.Controls.MetroButton metroButton3;
-       
     }
 }
 

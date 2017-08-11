@@ -66,16 +66,30 @@ namespace Blood_Donate_Management_System
 
         private void metroButton1_Click(object sender, EventArgs e)
         {
+            
+        }
+        private void menuStrip1_MouseEnter(object sender, EventArgs e)
+
+        {
+
+
+            toolStripMenuItem1.BackColor = Color.Red;
 
         }
-        private void OnMouseEnterButton1(object sender, EventArgs e)
+
+        private void metroContextMenu1_Opening(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            metroButton1.BackColor = System.Drawing.Color.DarkSlateBlue;
+
         }
-        private void OnMouseLeaveButton1(object sender, EventArgs e)
+
+        private void sylhetToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            metroButton1.BackColor = SystemColors.ButtonFace;
+
         }
     }
+
+
+
+
 }
-}
+

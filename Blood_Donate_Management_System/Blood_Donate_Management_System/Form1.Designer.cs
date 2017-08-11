@@ -31,6 +31,14 @@ namespace Blood_Donate_Management_System
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.newPasswordTxtBox = new MetroFramework.Controls.MetroTextBox();
+            this.mobileNumberTxtBox = new MetroFramework.Controls.MetroTextBox();
+            this.surNametxtBox = new MetroFramework.Controls.MetroTextBox();
+            this.firstNametxtBox = new MetroFramework.Controls.MetroTextBox();
+            this.signInBtn = new MetroFramework.Controls.MetroButton();
+            this.passwordTxtBox = new MetroFramework.Controls.MetroTextBox();
+            this.userIdTxtBox = new MetroFramework.Controls.MetroTextBox();
+            this.signUpBtn = new MetroFramework.Controls.MetroButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.metroButton5 = new MetroFramework.Controls.MetroButton();
@@ -55,21 +63,269 @@ namespace Blood_Donate_Management_System
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.newPasswordTxtBox);
+            this.panel1.Controls.Add(this.mobileNumberTxtBox);
+            this.panel1.Controls.Add(this.surNametxtBox);
+            this.panel1.Controls.Add(this.firstNametxtBox);
+            this.panel1.Controls.Add(this.signInBtn);
+            this.panel1.Controls.Add(this.passwordTxtBox);
+            this.panel1.Controls.Add(this.userIdTxtBox);
+            this.panel1.Controls.Add(this.signUpBtn);
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Location = new System.Drawing.Point(3, 88);
+            this.panel1.Location = new System.Drawing.Point(0, 90);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(680, 385);
+            this.panel1.Size = new System.Drawing.Size(683, 385);
             this.panel1.TabIndex = 0;
+            // 
+            // newPasswordTxtBox
+            // 
+            // 
+            // 
+            // 
+            this.newPasswordTxtBox.CustomButton.Image = null;
+            this.newPasswordTxtBox.CustomButton.Location = new System.Drawing.Point(354, 1);
+            this.newPasswordTxtBox.CustomButton.Name = "";
+            this.newPasswordTxtBox.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.newPasswordTxtBox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.newPasswordTxtBox.CustomButton.TabIndex = 1;
+            this.newPasswordTxtBox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.newPasswordTxtBox.CustomButton.UseSelectable = true;
+            this.newPasswordTxtBox.CustomButton.Visible = false;
+            this.newPasswordTxtBox.DisplayIcon = true;
+            this.newPasswordTxtBox.Lines = new string[0];
+            this.newPasswordTxtBox.Location = new System.Drawing.Point(153, 168);
+            this.newPasswordTxtBox.MaxLength = 32767;
+            this.newPasswordTxtBox.Name = "newPasswordTxtBox";
+            this.newPasswordTxtBox.PasswordChar = '●';
+            this.newPasswordTxtBox.PromptText = "New Password";
+            this.newPasswordTxtBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.newPasswordTxtBox.SelectedText = "";
+            this.newPasswordTxtBox.SelectionLength = 0;
+            this.newPasswordTxtBox.SelectionStart = 0;
+            this.newPasswordTxtBox.ShortcutsEnabled = true;
+            this.newPasswordTxtBox.Size = new System.Drawing.Size(376, 23);
+            this.newPasswordTxtBox.TabIndex = 35;
+            this.newPasswordTxtBox.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.newPasswordTxtBox.UseSelectable = true;
+            this.newPasswordTxtBox.UseSystemPasswordChar = true;
+            this.newPasswordTxtBox.Visible = false;
+            this.newPasswordTxtBox.WaterMark = "New Password";
+            this.newPasswordTxtBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.newPasswordTxtBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // mobileNumberTxtBox
+            // 
+            // 
+            // 
+            // 
+            this.mobileNumberTxtBox.CustomButton.Image = null;
+            this.mobileNumberTxtBox.CustomButton.Location = new System.Drawing.Point(354, 1);
+            this.mobileNumberTxtBox.CustomButton.Name = "";
+            this.mobileNumberTxtBox.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.mobileNumberTxtBox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.mobileNumberTxtBox.CustomButton.TabIndex = 1;
+            this.mobileNumberTxtBox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.mobileNumberTxtBox.CustomButton.UseSelectable = true;
+            this.mobileNumberTxtBox.CustomButton.Visible = false;
+            this.mobileNumberTxtBox.DisplayIcon = true;
+            this.mobileNumberTxtBox.Lines = new string[0];
+            this.mobileNumberTxtBox.Location = new System.Drawing.Point(153, 130);
+            this.mobileNumberTxtBox.MaxLength = 32767;
+            this.mobileNumberTxtBox.Name = "mobileNumberTxtBox";
+            this.mobileNumberTxtBox.PasswordChar = '\0';
+            this.mobileNumberTxtBox.PromptText = "Mobile number";
+            this.mobileNumberTxtBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.mobileNumberTxtBox.SelectedText = "";
+            this.mobileNumberTxtBox.SelectionLength = 0;
+            this.mobileNumberTxtBox.SelectionStart = 0;
+            this.mobileNumberTxtBox.ShortcutsEnabled = true;
+            this.mobileNumberTxtBox.Size = new System.Drawing.Size(376, 23);
+            this.mobileNumberTxtBox.TabIndex = 34;
+            this.mobileNumberTxtBox.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.mobileNumberTxtBox.UseCustomBackColor = true;
+            this.mobileNumberTxtBox.UseCustomForeColor = true;
+            this.mobileNumberTxtBox.UseSelectable = true;
+            this.mobileNumberTxtBox.Visible = false;
+            this.mobileNumberTxtBox.WaterMark = "Mobile number";
+            this.mobileNumberTxtBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.mobileNumberTxtBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // surNametxtBox
+            // 
+            // 
+            // 
+            // 
+            this.surNametxtBox.CustomButton.Image = null;
+            this.surNametxtBox.CustomButton.Location = new System.Drawing.Point(139, 1);
+            this.surNametxtBox.CustomButton.Name = "";
+            this.surNametxtBox.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.surNametxtBox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.surNametxtBox.CustomButton.TabIndex = 1;
+            this.surNametxtBox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.surNametxtBox.CustomButton.UseSelectable = true;
+            this.surNametxtBox.CustomButton.Visible = false;
+            this.surNametxtBox.DisplayIcon = true;
+            this.surNametxtBox.Lines = new string[0];
+            this.surNametxtBox.Location = new System.Drawing.Point(368, 91);
+            this.surNametxtBox.MaxLength = 32767;
+            this.surNametxtBox.Name = "surNametxtBox";
+            this.surNametxtBox.PasswordChar = '\0';
+            this.surNametxtBox.PromptText = "Surname";
+            this.surNametxtBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.surNametxtBox.SelectedText = "";
+            this.surNametxtBox.SelectionLength = 0;
+            this.surNametxtBox.SelectionStart = 0;
+            this.surNametxtBox.ShortcutsEnabled = true;
+            this.surNametxtBox.Size = new System.Drawing.Size(161, 23);
+            this.surNametxtBox.TabIndex = 33;
+            this.surNametxtBox.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.surNametxtBox.UseCustomBackColor = true;
+            this.surNametxtBox.UseCustomForeColor = true;
+            this.surNametxtBox.UseSelectable = true;
+            this.surNametxtBox.Visible = false;
+            this.surNametxtBox.WaterMark = "Surname";
+            this.surNametxtBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.surNametxtBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // firstNametxtBox
+            // 
+            // 
+            // 
+            // 
+            this.firstNametxtBox.CustomButton.Image = null;
+            this.firstNametxtBox.CustomButton.Location = new System.Drawing.Point(148, 1);
+            this.firstNametxtBox.CustomButton.Name = "";
+            this.firstNametxtBox.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.firstNametxtBox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.firstNametxtBox.CustomButton.TabIndex = 1;
+            this.firstNametxtBox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.firstNametxtBox.CustomButton.UseSelectable = true;
+            this.firstNametxtBox.CustomButton.Visible = false;
+            this.firstNametxtBox.DisplayIcon = true;
+            this.firstNametxtBox.Lines = new string[0];
+            this.firstNametxtBox.Location = new System.Drawing.Point(153, 91);
+            this.firstNametxtBox.MaxLength = 32767;
+            this.firstNametxtBox.Name = "firstNametxtBox";
+            this.firstNametxtBox.PasswordChar = '\0';
+            this.firstNametxtBox.PromptText = "First Name";
+            this.firstNametxtBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.firstNametxtBox.SelectedText = "";
+            this.firstNametxtBox.SelectionLength = 0;
+            this.firstNametxtBox.SelectionStart = 0;
+            this.firstNametxtBox.ShortcutsEnabled = true;
+            this.firstNametxtBox.Size = new System.Drawing.Size(170, 23);
+            this.firstNametxtBox.TabIndex = 32;
+            this.firstNametxtBox.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.firstNametxtBox.UseCustomBackColor = true;
+            this.firstNametxtBox.UseCustomForeColor = true;
+            this.firstNametxtBox.UseSelectable = true;
+            this.firstNametxtBox.Visible = false;
+            this.firstNametxtBox.WaterMark = "First Name";
+            this.firstNametxtBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.firstNametxtBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // signInBtn
+            // 
+            this.signInBtn.Location = new System.Drawing.Point(233, 180);
+            this.signInBtn.Name = "signInBtn";
+            this.signInBtn.Size = new System.Drawing.Size(237, 24);
+            this.signInBtn.TabIndex = 31;
+            this.signInBtn.Text = "SIGN IN";
+            this.signInBtn.UseSelectable = true;
+            this.signInBtn.Visible = false;
+            // 
+            // passwordTxtBox
+            // 
+            // 
+            // 
+            // 
+            this.passwordTxtBox.CustomButton.Image = null;
+            this.passwordTxtBox.CustomButton.Location = new System.Drawing.Point(215, 1);
+            this.passwordTxtBox.CustomButton.Name = "";
+            this.passwordTxtBox.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.passwordTxtBox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.passwordTxtBox.CustomButton.TabIndex = 1;
+            this.passwordTxtBox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.passwordTxtBox.CustomButton.UseSelectable = true;
+            this.passwordTxtBox.CustomButton.Visible = false;
+            this.passwordTxtBox.DisplayIcon = true;
+            this.passwordTxtBox.Lines = new string[0];
+            this.passwordTxtBox.Location = new System.Drawing.Point(233, 138);
+            this.passwordTxtBox.MaxLength = 32767;
+            this.passwordTxtBox.Name = "passwordTxtBox";
+            this.passwordTxtBox.PasswordChar = '●';
+            this.passwordTxtBox.PromptText = "Password";
+            this.passwordTxtBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.passwordTxtBox.SelectedText = "";
+            this.passwordTxtBox.SelectionLength = 0;
+            this.passwordTxtBox.SelectionStart = 0;
+            this.passwordTxtBox.ShortcutsEnabled = true;
+            this.passwordTxtBox.Size = new System.Drawing.Size(237, 23);
+            this.passwordTxtBox.TabIndex = 30;
+            this.passwordTxtBox.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.passwordTxtBox.UseSelectable = true;
+            this.passwordTxtBox.UseSystemPasswordChar = true;
+            this.passwordTxtBox.Visible = false;
+            this.passwordTxtBox.WaterMark = "Password";
+            this.passwordTxtBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.passwordTxtBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // userIdTxtBox
+            // 
+            // 
+            // 
+            // 
+            this.userIdTxtBox.CustomButton.Image = null;
+            this.userIdTxtBox.CustomButton.Location = new System.Drawing.Point(215, 1);
+            this.userIdTxtBox.CustomButton.Name = "";
+            this.userIdTxtBox.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.userIdTxtBox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.userIdTxtBox.CustomButton.TabIndex = 1;
+            this.userIdTxtBox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.userIdTxtBox.CustomButton.UseSelectable = true;
+            this.userIdTxtBox.CustomButton.Visible = false;
+            this.userIdTxtBox.DisplayIcon = true;
+            this.userIdTxtBox.Lines = new string[0];
+            this.userIdTxtBox.Location = new System.Drawing.Point(233, 99);
+            this.userIdTxtBox.MaxLength = 32767;
+            this.userIdTxtBox.Name = "userIdTxtBox";
+            this.userIdTxtBox.PasswordChar = '\0';
+            this.userIdTxtBox.PromptText = "UserID";
+            this.userIdTxtBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.userIdTxtBox.SelectedText = "";
+            this.userIdTxtBox.SelectionLength = 0;
+            this.userIdTxtBox.SelectionStart = 0;
+            this.userIdTxtBox.ShortcutsEnabled = true;
+            this.userIdTxtBox.Size = new System.Drawing.Size(237, 23);
+            this.userIdTxtBox.TabIndex = 29;
+            this.userIdTxtBox.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.userIdTxtBox.UseCustomBackColor = true;
+            this.userIdTxtBox.UseCustomForeColor = true;
+            this.userIdTxtBox.UseSelectable = true;
+            this.userIdTxtBox.Visible = false;
+            this.userIdTxtBox.WaterMark = "UserID";
+            this.userIdTxtBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.userIdTxtBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // signUpBtn
+            // 
+            this.signUpBtn.Location = new System.Drawing.Point(232, 227);
+            this.signUpBtn.Name = "signUpBtn";
+            this.signUpBtn.Size = new System.Drawing.Size(237, 24);
+            this.signUpBtn.TabIndex = 28;
+            this.signUpBtn.Text = "SIGN UP";
+            this.signUpBtn.UseSelectable = true;
+            this.signUpBtn.Visible = false;
+            this.signUpBtn.Click += new System.EventHandler(this.signUpBtn_Click_1);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(680, 385);
-            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.Size = new System.Drawing.Size(683, 385);
+            this.pictureBox1.TabIndex = 27;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // panel2
             // 
@@ -80,7 +336,7 @@ namespace Blood_Donate_Management_System
             this.panel2.Controls.Add(this.metroButton2);
             this.panel2.Controls.Add(this.menuStrip1);
             this.panel2.Controls.Add(this.metroButton1);
-            this.panel2.Location = new System.Drawing.Point(0, 54);
+            this.panel2.Location = new System.Drawing.Point(0, 55);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(683, 33);
             this.panel2.TabIndex = 1;
@@ -100,6 +356,7 @@ namespace Blood_Donate_Management_System
             this.metroButton5.UseCustomForeColor = true;
             this.metroButton5.UseSelectable = true;
             this.metroButton5.UseStyleColors = true;
+            this.metroButton5.Click += new System.EventHandler(this.metroButton5_Click);
             // 
             // metroButton4
             // 
@@ -139,7 +396,7 @@ namespace Blood_Donate_Management_System
             this.metroButton2.FontSize = MetroFramework.MetroButtonSize.Medium;
             this.metroButton2.FontWeight = MetroFramework.MetroButtonWeight.Regular;
             this.metroButton2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.metroButton2.Location = new System.Drawing.Point(89, -2);
+            this.metroButton2.Location = new System.Drawing.Point(88, -2);
             this.metroButton2.Margin = new System.Windows.Forms.Padding(0);
             this.metroButton2.Name = "metroButton2";
             this.metroButton2.Size = new System.Drawing.Size(92, 36);
@@ -214,7 +471,7 @@ namespace Blood_Donate_Management_System
             this.sylhetToolStripMenuItem.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.sylhetToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.sylhetToolStripMenuItem.Name = "sylhetToolStripMenuItem";
-            this.sylhetToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.sylhetToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.sylhetToolStripMenuItem.Text = "Sylhet";
             this.sylhetToolStripMenuItem.Click += new System.EventHandler(this.sylhetToolStripMenuItem_Click);
             // 
@@ -248,9 +505,9 @@ namespace Blood_Donate_Management_System
             this.metroButton1.FontSize = MetroFramework.MetroButtonSize.Medium;
             this.metroButton1.FontWeight = MetroFramework.MetroButtonWeight.Regular;
             this.metroButton1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.metroButton1.Location = new System.Drawing.Point(1, -1);
+            this.metroButton1.Location = new System.Drawing.Point(-7, -1);
             this.metroButton1.Name = "metroButton1";
-            this.metroButton1.Size = new System.Drawing.Size(88, 35);
+            this.metroButton1.Size = new System.Drawing.Size(96, 35);
             this.metroButton1.TabIndex = 4;
             this.metroButton1.Text = "Home";
             this.metroButton1.UseCustomBackColor = true;
@@ -287,8 +544,6 @@ namespace Blood_Donate_Management_System
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel2;
         private MetroFramework.Controls.MetroButton metroButton1;
         private MetroFramework.Controls.MetroButton metroButton2;
@@ -304,6 +559,15 @@ namespace Blood_Donate_Management_System
         private MetroFramework.Controls.MetroButton metroButton5;
         private MetroFramework.Controls.MetroButton metroButton4;
         private MetroFramework.Controls.MetroButton metroButton3;
+        private MetroFramework.Controls.MetroTextBox newPasswordTxtBox;
+        private MetroFramework.Controls.MetroTextBox mobileNumberTxtBox;
+        private MetroFramework.Controls.MetroTextBox surNametxtBox;
+        private MetroFramework.Controls.MetroTextBox firstNametxtBox;
+        private MetroFramework.Controls.MetroButton signInBtn;
+        private MetroFramework.Controls.MetroTextBox passwordTxtBox;
+        private MetroFramework.Controls.MetroTextBox userIdTxtBox;
+        private MetroFramework.Controls.MetroButton signUpBtn;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Drawing;
-using System.Timers;
 
 using System.Windows.Forms;
 
@@ -86,6 +85,36 @@ namespace Blood_Donate_Management_System
         {
 
         }
+
+        private void metroButton5_Click(object sender, EventArgs e)
+        {
+            pictureBox1.Visible = false;
+            userIdTxtBox.Visible = true;
+            passwordTxtBox.Visible = true;
+            signInBtn.Visible = true;
+            signUpBtn.Visible = true;
+
+        }
+
+
+        private void signInBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void signUpBtn_Click_1(object sender, EventArgs e)
+        {
+            userIdTxtBox.Visible = false;
+            passwordTxtBox.Visible = false;
+            signInBtn.Visible = false;
+            signUpBtn.Visible = false;
+
+            firstNametxtBox.Visible = true;
+            surNametxtBox.Visible = true;
+            mobileNumberTxtBox.Visible = true;
+            newPasswordTxtBox.Visible = true;
+        }
+
     }
 
 

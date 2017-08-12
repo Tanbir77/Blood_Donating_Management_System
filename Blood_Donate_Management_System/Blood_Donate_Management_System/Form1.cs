@@ -52,6 +52,22 @@ namespace Blood_Donate_Management_System
           
             
         }
+        private void signUpComponentsVisibility(bool flag)
+        {
+            firstNametxtBox.Visible = flag;
+            surNametxtBox.Visible = flag;
+            mobileNumberTxtBox.Visible = flag;
+            newPasswordTxtBox.Visible = flag;
+            districtComboBox.Visible = flag;
+            areaTxtBox.Visible = flag;
+            birthMonthComboBox.Visible = flag;
+            birthDayTxtBox.Visible = flag;
+            birthYearTxtBox.Visible = flag;
+            bloodGroupComboBox.Visible = flag;
+            maleRadioButton.Visible = flag;
+            femaleRadioButton.Visible = flag;
+            createAccountButton.Visible = flag;
+        }
 
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
@@ -89,16 +105,11 @@ namespace Blood_Donate_Management_System
         private void metroButton5_Click(object sender, EventArgs e)
         {
             pictureBox1.Visible = false;
+            signUpComponentsVisibility(false);
             userIdTxtBox.Visible = true;
             passwordTxtBox.Visible = true;
             signInBtn.Visible = true;
             signUpBtn.Visible = true;
-
-        }
-
-
-        private void signInBtn_Click(object sender, EventArgs e)
-        {
 
         }
 
@@ -108,13 +119,14 @@ namespace Blood_Donate_Management_System
             passwordTxtBox.Visible = false;
             signInBtn.Visible = false;
             signUpBtn.Visible = false;
+            signUpComponentsVisibility(true);
 
-            firstNametxtBox.Visible = true;
-            surNametxtBox.Visible = true;
-            mobileNumberTxtBox.Visible = true;
-            newPasswordTxtBox.Visible = true;
         }
 
+        private void pictureBox1_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 
 

@@ -9,7 +9,7 @@ namespace Blood_Donate_Management_System
     {
         private System.Windows.Forms.Timer timer1;
         private int counter = 0;
-        private String [] imagePaths = new string[10];
+        private String[] imagePaths = new string[10];
         private string gender;
         public Form1()
         {
@@ -19,39 +19,63 @@ namespace Blood_Donate_Management_System
 
         private void ShowCoverImages()
         {
-             timer1 = new System.Windows.Forms.Timer();
-             timer1.Tick += new EventHandler(timer1_Tick);
-             pictureBox1.Load($"Images/BloodDonation{counter++}.jpg");
-             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-             timer1.Interval = 5000; // 5 second
-             timer1.Start();
-            
-            
-            
+            timer1 = new System.Windows.Forms.Timer();
+            timer1.Tick += new EventHandler(timer1_Tick);
+            pictureBox1.Load($"Images/BloodDonation{counter++}.jpg");
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            timer1.Interval = 5000; // 5 second
+            timer1.Start();
+
+
+
         }
 
 
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-           
-            if (counter ==12)
+
+            if (counter == 12)
             {
                 timer1.Stop();
                 counter = 0;
                 timer1.Start();
-                
+
             }
             try
             {
                 pictureBox1.Load($"Images/BloodDonation{counter++}.jpg");
                 pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            }catch(Exception ex)
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show("You delete this image from Images file");
             }
-          
-            
+
+
+        }
+        private void timer1_Tick1(object sender, EventArgs e)
+        {
+            if (newPasswordTxtBox.Text !=""&&confirmPasswordTxtBox.Text!="")
+            {  if(newPasswordTxtBox.Text!=confirmPasswordTxtBox.Text)
+                   passConfiramtionLabel.Visible = true;
+               else
+                   passConfiramtionLabel.Visible = false;
+            }
+            else
+                passConfiramtionLabel.Visible = false;
+
+            long number;
+            bool flag = Int64.TryParse(mobileNumberTxtBox.Text, out number);
+
+            if(flag==false && mobileNumberTxtBox.Text!="")
+                mbNovalidationLabel.Visible = true;
+            else
+                mbNovalidationLabel.Visible = false;
+
+
+
+
         }
         private void signUpComponentsVisibility(bool flag)
         {
@@ -84,7 +108,7 @@ namespace Blood_Donate_Management_System
 
         private void metroButton1_Click(object sender, EventArgs e)
         {
-            
+
         }
         private void menuStrip1_MouseEnter(object sender, EventArgs e)
 
@@ -123,13 +147,13 @@ namespace Blood_Donate_Management_System
             signInBtn.Visible = false;
             signUpBtn.Visible = false;
             signUpComponentsVisibility(true);
+            timer1 = new System.Windows.Forms.Timer();
+            timer1.Tick += new EventHandler(timer1_Tick1);
+            timer1.Interval = 1; // 1 mili second
+            timer1.Start();
 
         }
 
-        private void pictureBox1_Click_1(object sender, EventArgs e)
-        {
-
-        }
 
         private void createAccountButton_Click(object sender, EventArgs e)
         {
@@ -166,8 +190,9 @@ namespace Blood_Donate_Management_System
                     context.People.Add(newPerson);
                     context.Users.Add(newUser);
                     context.SaveChanges();
-                }catch(Exception ex) { }
-                  
+                }
+                catch (Exception ex) { }
+
             }
             using (var context = new BDMSDBEntities3())
             {
@@ -190,8 +215,13 @@ namespace Blood_Donate_Management_System
         {
             this.gender = "Female";
         }
-    }
 
+        private void signInBtn_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+    }
 
 
 

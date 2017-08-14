@@ -31,6 +31,7 @@ namespace Blood_Donate_Management_System
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.passConfiramtionLabel = new MetroFramework.Controls.MetroLabel();
             this.confirmPasswordTxtBox = new MetroFramework.Controls.MetroTextBox();
             this.userNameTxtBox = new MetroFramework.Controls.MetroTextBox();
             this.createAccountButton = new MetroFramework.Controls.MetroButton();
@@ -66,6 +67,7 @@ namespace Blood_Donate_Management_System
             this.barisalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rangpurToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.metroButton1 = new MetroFramework.Controls.MetroButton();
+            this.mbNovalidationLabel = new MetroFramework.Controls.MetroLabel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -74,6 +76,8 @@ namespace Blood_Donate_Management_System
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.mbNovalidationLabel);
+            this.panel1.Controls.Add(this.passConfiramtionLabel);
             this.panel1.Controls.Add(this.confirmPasswordTxtBox);
             this.panel1.Controls.Add(this.userNameTxtBox);
             this.panel1.Controls.Add(this.createAccountButton);
@@ -99,13 +103,27 @@ namespace Blood_Donate_Management_System
             this.panel1.Size = new System.Drawing.Size(683, 385);
             this.panel1.TabIndex = 0;
             // 
+            // passConfiramtionLabel
+            // 
+            this.passConfiramtionLabel.FontSize = MetroFramework.MetroLabelSize.Small;
+            this.passConfiramtionLabel.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.passConfiramtionLabel.ForeColor = System.Drawing.Color.Red;
+            this.passConfiramtionLabel.Location = new System.Drawing.Point(534, 125);
+            this.passConfiramtionLabel.Name = "passConfiramtionLabel";
+            this.passConfiramtionLabel.Size = new System.Drawing.Size(150, 21);
+            this.passConfiramtionLabel.TabIndex = 49;
+            this.passConfiramtionLabel.Text = "Password is not mached! ";
+            this.passConfiramtionLabel.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.passConfiramtionLabel.UseCustomForeColor = true;
+            this.passConfiramtionLabel.Visible = false;
+            // 
             // confirmPasswordTxtBox
             // 
             // 
             // 
             // 
             this.confirmPasswordTxtBox.CustomButton.Image = null;
-            this.confirmPasswordTxtBox.CustomButton.Location = new System.Drawing.Point(133, 1);
+            this.confirmPasswordTxtBox.CustomButton.Location = new System.Drawing.Point(142, 1);
             this.confirmPasswordTxtBox.CustomButton.Name = "";
             this.confirmPasswordTxtBox.CustomButton.Size = new System.Drawing.Size(27, 27);
             this.confirmPasswordTxtBox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -115,7 +133,7 @@ namespace Blood_Donate_Management_System
             this.confirmPasswordTxtBox.CustomButton.Visible = false;
             this.confirmPasswordTxtBox.DisplayIcon = true;
             this.confirmPasswordTxtBox.Lines = new string[0];
-            this.confirmPasswordTxtBox.Location = new System.Drawing.Point(368, 118);
+            this.confirmPasswordTxtBox.Location = new System.Drawing.Point(358, 118);
             this.confirmPasswordTxtBox.MaxLength = 32767;
             this.confirmPasswordTxtBox.Name = "confirmPasswordTxtBox";
             this.confirmPasswordTxtBox.PasswordChar = '●';
@@ -125,7 +143,7 @@ namespace Blood_Donate_Management_System
             this.confirmPasswordTxtBox.SelectionLength = 0;
             this.confirmPasswordTxtBox.SelectionStart = 0;
             this.confirmPasswordTxtBox.ShortcutsEnabled = true;
-            this.confirmPasswordTxtBox.Size = new System.Drawing.Size(161, 29);
+            this.confirmPasswordTxtBox.Size = new System.Drawing.Size(170, 29);
             this.confirmPasswordTxtBox.TabIndex = 48;
             this.confirmPasswordTxtBox.Theme = MetroFramework.MetroThemeStyle.Light;
             this.confirmPasswordTxtBox.UseSelectable = true;
@@ -151,7 +169,7 @@ namespace Blood_Donate_Management_System
             this.userNameTxtBox.CustomButton.Visible = false;
             this.userNameTxtBox.DisplayIcon = true;
             this.userNameTxtBox.Lines = new string[0];
-            this.userNameTxtBox.Location = new System.Drawing.Point(153, 77);
+            this.userNameTxtBox.Location = new System.Drawing.Point(143, 77);
             this.userNameTxtBox.MaxLength = 32767;
             this.userNameTxtBox.Name = "userNameTxtBox";
             this.userNameTxtBox.PasswordChar = '\0';
@@ -178,7 +196,7 @@ namespace Blood_Donate_Management_System
             this.createAccountButton.FontSize = MetroFramework.MetroButtonSize.Medium;
             this.createAccountButton.FontWeight = MetroFramework.MetroButtonWeight.Regular;
             this.createAccountButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.createAccountButton.Location = new System.Drawing.Point(153, 323);
+            this.createAccountButton.Location = new System.Drawing.Point(143, 323);
             this.createAccountButton.Name = "createAccountButton";
             this.createAccountButton.Size = new System.Drawing.Size(376, 36);
             this.createAccountButton.TabIndex = 46;
@@ -202,7 +220,7 @@ namespace Blood_Donate_Management_System
             "Sylhet+",
             "Barisal",
             "Rangpur"});
-            this.districtComboBox.Location = new System.Drawing.Point(153, 158);
+            this.districtComboBox.Location = new System.Drawing.Point(143, 158);
             this.districtComboBox.Name = "districtComboBox";
             this.districtComboBox.PromptText = "District";
             this.districtComboBox.Size = new System.Drawing.Size(170, 29);
@@ -223,7 +241,7 @@ namespace Blood_Donate_Management_System
             "AB-",
             "O+",
             "O-"});
-            this.bloodGroupComboBox.Location = new System.Drawing.Point(153, 242);
+            this.bloodGroupComboBox.Location = new System.Drawing.Point(143, 242);
             this.bloodGroupComboBox.Name = "bloodGroupComboBox";
             this.bloodGroupComboBox.PromptText = "Blood Group";
             this.bloodGroupComboBox.Size = new System.Drawing.Size(114, 29);
@@ -247,7 +265,7 @@ namespace Blood_Donate_Management_System
             this.birthYearTxtBox.CustomButton.Visible = false;
             this.birthYearTxtBox.DisplayIcon = true;
             this.birthYearTxtBox.Lines = new string[0];
-            this.birthYearTxtBox.Location = new System.Drawing.Point(297, 199);
+            this.birthYearTxtBox.Location = new System.Drawing.Point(287, 199);
             this.birthYearTxtBox.MaxLength = 32767;
             this.birthYearTxtBox.Name = "birthYearTxtBox";
             this.birthYearTxtBox.PasswordChar = '\0';
@@ -284,7 +302,7 @@ namespace Blood_Donate_Management_System
             this.birthDayTxtBox.CustomButton.Visible = false;
             this.birthDayTxtBox.DisplayIcon = true;
             this.birthDayTxtBox.Lines = new string[0];
-            this.birthDayTxtBox.Location = new System.Drawing.Point(242, 199);
+            this.birthDayTxtBox.Location = new System.Drawing.Point(232, 199);
             this.birthDayTxtBox.MaxLength = 32767;
             this.birthDayTxtBox.Name = "birthDayTxtBox";
             this.birthDayTxtBox.PasswordChar = '\0';
@@ -322,7 +340,7 @@ namespace Blood_Donate_Management_System
             "Oct",
             "Nov",
             "Dec"});
-            this.birthMonthComboBox.Location = new System.Drawing.Point(153, 199);
+            this.birthMonthComboBox.Location = new System.Drawing.Point(143, 199);
             this.birthMonthComboBox.Name = "birthMonthComboBox";
             this.birthMonthComboBox.PromptText = "Month";
             this.birthMonthComboBox.Size = new System.Drawing.Size(93, 29);
@@ -333,7 +351,7 @@ namespace Blood_Donate_Management_System
             // femaleRadioButton
             // 
             this.femaleRadioButton.AutoSize = true;
-            this.femaleRadioButton.Location = new System.Drawing.Point(220, 288);
+            this.femaleRadioButton.Location = new System.Drawing.Point(210, 288);
             this.femaleRadioButton.Name = "femaleRadioButton";
             this.femaleRadioButton.Size = new System.Drawing.Size(59, 17);
             this.femaleRadioButton.TabIndex = 40;
@@ -346,7 +364,7 @@ namespace Blood_Donate_Management_System
             // maleRadioButton
             // 
             this.maleRadioButton.AutoSize = true;
-            this.maleRadioButton.Location = new System.Drawing.Point(153, 288);
+            this.maleRadioButton.Location = new System.Drawing.Point(143, 288);
             this.maleRadioButton.Name = "maleRadioButton";
             this.maleRadioButton.Size = new System.Drawing.Size(48, 17);
             this.maleRadioButton.TabIndex = 39;
@@ -362,7 +380,7 @@ namespace Blood_Donate_Management_System
             // 
             // 
             this.areaTxtBox.CustomButton.Image = null;
-            this.areaTxtBox.CustomButton.Location = new System.Drawing.Point(133, 1);
+            this.areaTxtBox.CustomButton.Location = new System.Drawing.Point(142, 1);
             this.areaTxtBox.CustomButton.Name = "";
             this.areaTxtBox.CustomButton.Size = new System.Drawing.Size(27, 27);
             this.areaTxtBox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -372,7 +390,7 @@ namespace Blood_Donate_Management_System
             this.areaTxtBox.CustomButton.Visible = false;
             this.areaTxtBox.DisplayIcon = true;
             this.areaTxtBox.Lines = new string[0];
-            this.areaTxtBox.Location = new System.Drawing.Point(368, 158);
+            this.areaTxtBox.Location = new System.Drawing.Point(358, 158);
             this.areaTxtBox.MaxLength = 32767;
             this.areaTxtBox.Name = "areaTxtBox";
             this.areaTxtBox.PasswordChar = '\0';
@@ -382,7 +400,7 @@ namespace Blood_Donate_Management_System
             this.areaTxtBox.SelectionLength = 0;
             this.areaTxtBox.SelectionStart = 0;
             this.areaTxtBox.ShortcutsEnabled = true;
-            this.areaTxtBox.Size = new System.Drawing.Size(161, 29);
+            this.areaTxtBox.Size = new System.Drawing.Size(170, 29);
             this.areaTxtBox.TabIndex = 37;
             this.areaTxtBox.Theme = MetroFramework.MetroThemeStyle.Light;
             this.areaTxtBox.UseCustomBackColor = true;
@@ -409,7 +427,7 @@ namespace Blood_Donate_Management_System
             this.newPasswordTxtBox.CustomButton.Visible = false;
             this.newPasswordTxtBox.DisplayIcon = true;
             this.newPasswordTxtBox.Lines = new string[0];
-            this.newPasswordTxtBox.Location = new System.Drawing.Point(153, 118);
+            this.newPasswordTxtBox.Location = new System.Drawing.Point(143, 118);
             this.newPasswordTxtBox.MaxLength = 32767;
             this.newPasswordTxtBox.Name = "newPasswordTxtBox";
             this.newPasswordTxtBox.PasswordChar = '●';
@@ -435,7 +453,7 @@ namespace Blood_Donate_Management_System
             // 
             // 
             this.mobileNumberTxtBox.CustomButton.Image = null;
-            this.mobileNumberTxtBox.CustomButton.Location = new System.Drawing.Point(133, 1);
+            this.mobileNumberTxtBox.CustomButton.Location = new System.Drawing.Point(142, 1);
             this.mobileNumberTxtBox.CustomButton.Name = "";
             this.mobileNumberTxtBox.CustomButton.Size = new System.Drawing.Size(27, 27);
             this.mobileNumberTxtBox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -445,7 +463,7 @@ namespace Blood_Donate_Management_System
             this.mobileNumberTxtBox.CustomButton.Visible = false;
             this.mobileNumberTxtBox.DisplayIcon = true;
             this.mobileNumberTxtBox.Lines = new string[0];
-            this.mobileNumberTxtBox.Location = new System.Drawing.Point(368, 77);
+            this.mobileNumberTxtBox.Location = new System.Drawing.Point(358, 77);
             this.mobileNumberTxtBox.MaxLength = 32767;
             this.mobileNumberTxtBox.Name = "mobileNumberTxtBox";
             this.mobileNumberTxtBox.PasswordChar = '\0';
@@ -455,7 +473,7 @@ namespace Blood_Donate_Management_System
             this.mobileNumberTxtBox.SelectionLength = 0;
             this.mobileNumberTxtBox.SelectionStart = 0;
             this.mobileNumberTxtBox.ShortcutsEnabled = true;
-            this.mobileNumberTxtBox.Size = new System.Drawing.Size(161, 29);
+            this.mobileNumberTxtBox.Size = new System.Drawing.Size(170, 29);
             this.mobileNumberTxtBox.TabIndex = 34;
             this.mobileNumberTxtBox.Theme = MetroFramework.MetroThemeStyle.Light;
             this.mobileNumberTxtBox.UseCustomBackColor = true;
@@ -472,7 +490,7 @@ namespace Blood_Donate_Management_System
             // 
             // 
             this.surNametxtBox.CustomButton.Image = null;
-            this.surNametxtBox.CustomButton.Location = new System.Drawing.Point(133, 1);
+            this.surNametxtBox.CustomButton.Location = new System.Drawing.Point(142, 1);
             this.surNametxtBox.CustomButton.Name = "";
             this.surNametxtBox.CustomButton.Size = new System.Drawing.Size(27, 27);
             this.surNametxtBox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -482,7 +500,7 @@ namespace Blood_Donate_Management_System
             this.surNametxtBox.CustomButton.Visible = false;
             this.surNametxtBox.DisplayIcon = true;
             this.surNametxtBox.Lines = new string[0];
-            this.surNametxtBox.Location = new System.Drawing.Point(368, 34);
+            this.surNametxtBox.Location = new System.Drawing.Point(358, 34);
             this.surNametxtBox.MaxLength = 32767;
             this.surNametxtBox.Name = "surNametxtBox";
             this.surNametxtBox.PasswordChar = '\0';
@@ -492,7 +510,7 @@ namespace Blood_Donate_Management_System
             this.surNametxtBox.SelectionLength = 0;
             this.surNametxtBox.SelectionStart = 0;
             this.surNametxtBox.ShortcutsEnabled = true;
-            this.surNametxtBox.Size = new System.Drawing.Size(161, 29);
+            this.surNametxtBox.Size = new System.Drawing.Size(170, 29);
             this.surNametxtBox.TabIndex = 33;
             this.surNametxtBox.Theme = MetroFramework.MetroThemeStyle.Light;
             this.surNametxtBox.UseCustomBackColor = true;
@@ -519,7 +537,7 @@ namespace Blood_Donate_Management_System
             this.firstNametxtBox.CustomButton.Visible = false;
             this.firstNametxtBox.DisplayIcon = true;
             this.firstNametxtBox.Lines = new string[0];
-            this.firstNametxtBox.Location = new System.Drawing.Point(153, 34);
+            this.firstNametxtBox.Location = new System.Drawing.Point(143, 34);
             this.firstNametxtBox.MaxLength = 32767;
             this.firstNametxtBox.Name = "firstNametxtBox";
             this.firstNametxtBox.PasswordChar = '\0';
@@ -549,6 +567,7 @@ namespace Blood_Donate_Management_System
             this.signInBtn.Text = "SIGN IN";
             this.signInBtn.UseSelectable = true;
             this.signInBtn.Visible = false;
+            this.signInBtn.Click += new System.EventHandler(this.signInBtn_Click);
             // 
             // passwordTxtBox
             // 
@@ -642,7 +661,6 @@ namespace Blood_Donate_Management_System
             this.pictureBox1.Size = new System.Drawing.Size(683, 385);
             this.pictureBox1.TabIndex = 27;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click_1);
             // 
             // panel2
             // 
@@ -833,6 +851,20 @@ namespace Blood_Donate_Management_System
             this.metroButton1.UseStyleColors = true;
             this.metroButton1.Click += new System.EventHandler(this.metroButton1_Click);
             // 
+            // mbNovalidationLabel
+            // 
+            this.mbNovalidationLabel.FontSize = MetroFramework.MetroLabelSize.Small;
+            this.mbNovalidationLabel.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.mbNovalidationLabel.ForeColor = System.Drawing.Color.Red;
+            this.mbNovalidationLabel.Location = new System.Drawing.Point(533, 85);
+            this.mbNovalidationLabel.Name = "mbNovalidationLabel";
+            this.mbNovalidationLabel.Size = new System.Drawing.Size(150, 21);
+            this.mbNovalidationLabel.TabIndex = 50;
+            this.mbNovalidationLabel.Text = "Mobile Number is invalid!";
+            this.mbNovalidationLabel.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.mbNovalidationLabel.UseCustomForeColor = true;
+            this.mbNovalidationLabel.Visible = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -857,7 +889,9 @@ namespace Blood_Donate_Management_System
 
         }
 
-   
+    
+
+
 
         #endregion
 
@@ -897,6 +931,8 @@ namespace Blood_Donate_Management_System
         private MetroFramework.Controls.MetroButton createAccountButton;
         private MetroFramework.Controls.MetroTextBox confirmPasswordTxtBox;
         private MetroFramework.Controls.MetroTextBox userNameTxtBox;
+        private MetroFramework.Controls.MetroLabel passConfiramtionLabel;
+        private MetroFramework.Controls.MetroLabel mbNovalidationLabel;
     }
 }
 

@@ -56,6 +56,8 @@ namespace Blood_Donate_Management_System
         {
             firstNametxtBox.Visible = flag;
             surNametxtBox.Visible = flag;
+            userNameTxtBox.Visible = flag;
+            confirmPasswordTxtBox.Visible = flag;
             mobileNumberTxtBox.Visible = flag;
             newPasswordTxtBox.Visible = flag;
             districtComboBox.Visible = flag;
@@ -106,7 +108,7 @@ namespace Blood_Donate_Management_System
         {
             pictureBox1.Visible = false;
             signUpComponentsVisibility(false);
-            userIdTxtBox.Visible = true;
+            loginUserNameTxtBox.Visible = true;
             passwordTxtBox.Visible = true;
             signInBtn.Visible = true;
             signUpBtn.Visible = true;
@@ -115,7 +117,7 @@ namespace Blood_Donate_Management_System
 
         private void signUpBtn_Click_1(object sender, EventArgs e)
         {
-            userIdTxtBox.Visible = false;
+            loginUserNameTxtBox.Visible = false;
             passwordTxtBox.Visible = false;
             signInBtn.Visible = false;
             signUpBtn.Visible = false;

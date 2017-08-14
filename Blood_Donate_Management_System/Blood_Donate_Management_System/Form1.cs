@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Drawing;
-
+using System.Globalization;
 using System.Windows.Forms;
 
 namespace Blood_Donate_Management_System
@@ -10,6 +10,7 @@ namespace Blood_Donate_Management_System
         private System.Windows.Forms.Timer timer1;
         private int counter = 0;
         private String [] imagePaths = new string[10];
+        private string gender;
         public Form1()
         {
             InitializeComponent();
@@ -128,6 +129,66 @@ namespace Blood_Donate_Management_System
         private void pictureBox1_Click_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void createAccountButton_Click(object sender, EventArgs e)
+        {
+            CultureInfo culture = new CultureInfo("ja-JP");
+            string birthDate = birthYearTxtBox.Text + "/" + birthMonthComboBox.Text + "/" + birthDayTxtBox.Text;
+            Person newPerson = new Person
+            {
+                firstName = firstNametxtBox.Text,
+                surName = surNametxtBox.Text,
+                userName = userNameTxtBox.Text,
+                mobileNo = mobileNumberTxtBox.Text,
+                area = areaTxtBox.Text,
+                bloodGroup = bloodGroupComboBox.Text,
+                dateOfBirth = Convert.ToDateTime(birthDate, culture),
+                sex = this.gender
+
+            };
+
+            User newUser = new User
+            {
+                userName = userNameTxtBox.Text,
+                password = newPasswordTxtBox.Text
+
+            };
+            Address userAddress = new Address
+            {
+                area = areaTxtBox.Text,
+                district = districtComboBox.Text
+            };
+            using (var context = new BDMSDBEntities3())
+            {
+                try
+                {
+                    context.People.Add(newPerson);
+                    context.Users.Add(newUser);
+                    context.SaveChanges();
+                }catch(Exception ex) { }
+                  
+            }
+            using (var context = new BDMSDBEntities3())
+            {
+                try
+                {
+                    context.Addresses.Add(userAddress);
+                    context.SaveChanges();
+                }
+                catch (Exception ex) { }
+            }
+
+        }
+
+        private void maleRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            this.gender = "Male";
+        }
+
+        private void femaleRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            this.gender = "Female";
         }
     }
 

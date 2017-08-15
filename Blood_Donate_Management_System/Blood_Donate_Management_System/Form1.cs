@@ -2,6 +2,7 @@
 using System.Drawing;
 using System.Globalization;
 using System.Windows.Forms;
+using System.Linq;
 
 namespace Blood_Donate_Management_System
 {
@@ -72,6 +73,23 @@ namespace Blood_Donate_Management_System
                 mbNovalidationLabel.Visible = true;
             else
                 mbNovalidationLabel.Visible = false;
+
+            if(userNameTxtBox.Text!="")
+            {
+                using (var context = new BDMSDBEntities())
+                {
+              
+                    if (context.Users.Any(o => o.userName == userNameTxtBox.Text))
+                    {
+                        userNameValidityLabel.Visible = true;
+                    }
+                    else
+                        userNameValidityLabel.Visible = false;
+                }
+               
+
+            }
+           
 
 
 
@@ -159,50 +177,56 @@ namespace Blood_Donate_Management_System
         {
             CultureInfo culture = new CultureInfo("ja-JP");
             string birthDate = birthYearTxtBox.Text + "/" + birthMonthComboBox.Text + "/" + birthDayTxtBox.Text;
-            Person newPerson = new Person
+            try
             {
-                firstName = firstNametxtBox.Text,
-                surName = surNametxtBox.Text,
-                userName = userNameTxtBox.Text,
-                mobileNo = mobileNumberTxtBox.Text,
-                area = areaTxtBox.Text,
-                bloodGroup = bloodGroupComboBox.Text,
-                dateOfBirth = Convert.ToDateTime(birthDate, culture),
-                sex = this.gender
-
-            };
-
-            User newUser = new User
-            {
-                userName = userNameTxtBox.Text,
-                password = newPasswordTxtBox.Text
-
-            };
-            Address userAddress = new Address
-            {
-                area = areaTxtBox.Text,
-                district = districtComboBox.Text
-            };
-            using (var context = new BDMSDBEntities3())
-            {
-                try
+                Person newPerson = new Person
                 {
+                    firstName = firstNametxtBox.Text,
+                    surName = surNametxtBox.Text,
+                    userName = userNameTxtBox.Text,
+                    mobileNo = mobileNumberTxtBox.Text,
+                    area = areaTxtBox.Text,
+                    bloodGroup = bloodGroupComboBox.Text,
+                    dateOfBirth = Convert.ToDateTime(birthDate, culture),
+                    sex = this.gender
+
+                };
+
+                User newUser = new User
+                {
+                    userName = userNameTxtBox.Text,
+                    password = newPasswordTxtBox.Text
+
+                };
+                Address userAddress = new Address
+                {
+                    area = areaTxtBox.Text,
+                    district = districtComboBox.Text
+                };
+                using (var context = new BDMSDBEntities())
+                {
+
                     context.People.Add(newPerson);
                     context.Users.Add(newUser);
                     context.SaveChanges();
                 }
-                catch (Exception ex) { }
+                using (var context = new BDMSDBEntities())
+                {
+                    try
+                    {
+                        context.Addresses.Add(userAddress);
+                        context.SaveChanges();
+                    }
+                    catch (Exception ex) { }
+                }
+
+            }catch(Exception ex){
 
             }
-            using (var context = new BDMSDBEntities3())
-            {
-                try
-                {
-                    context.Addresses.Add(userAddress);
-                    context.SaveChanges();
-                }
-                catch (Exception ex) { }
-            }
+            finally { }
+
+        
+
 
         }
 
@@ -218,9 +242,31 @@ namespace Blood_Donate_Management_System
 
         private void signInBtn_Click(object sender, EventArgs e)
         {
-            
+            using(BDMSDBEntities context = new BDMSDBEntities())
+            {   
+                try
+                {
+                   
+                    string pass = context.Users.FirstOrDefault(x => x.userName == loginUserNameTxtBox.Text).password.ToString();
+
+                    if (pass != passwordTxtBox.Text)
+                    {
+                        loginErrorMsgLabel.Text = "Password is incorrect!";
+                        loginErrorMsgLabel.Visible = true;
+ 
+                    }
+                    else
+                        loginErrorMsgLabel.Visible = false;
+                }
+                catch(Exception ex) {
+                    loginErrorMsgLabel.Text = "Username is invalid!";
+                    loginErrorMsgLabel.Visible = true;
+                }
+            }
         }
 
+    
+    
     }
 
 

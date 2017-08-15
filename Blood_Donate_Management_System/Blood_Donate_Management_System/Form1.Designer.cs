@@ -31,6 +31,8 @@ namespace Blood_Donate_Management_System
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.userNameValidityLabel = new MetroFramework.Controls.MetroLabel();
+            this.mbNovalidationLabel = new MetroFramework.Controls.MetroLabel();
             this.passConfiramtionLabel = new MetroFramework.Controls.MetroLabel();
             this.confirmPasswordTxtBox = new MetroFramework.Controls.MetroTextBox();
             this.userNameTxtBox = new MetroFramework.Controls.MetroTextBox();
@@ -67,7 +69,7 @@ namespace Blood_Donate_Management_System
             this.barisalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rangpurToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.metroButton1 = new MetroFramework.Controls.MetroButton();
-            this.mbNovalidationLabel = new MetroFramework.Controls.MetroLabel();
+            this.loginErrorMsgLabel = new MetroFramework.Controls.MetroLabel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -76,6 +78,8 @@ namespace Blood_Donate_Management_System
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.loginErrorMsgLabel);
+            this.panel1.Controls.Add(this.userNameValidityLabel);
             this.panel1.Controls.Add(this.mbNovalidationLabel);
             this.panel1.Controls.Add(this.passConfiramtionLabel);
             this.panel1.Controls.Add(this.confirmPasswordTxtBox);
@@ -103,12 +107,40 @@ namespace Blood_Donate_Management_System
             this.panel1.Size = new System.Drawing.Size(683, 385);
             this.panel1.TabIndex = 0;
             // 
+            // userNameValidityLabel
+            // 
+            this.userNameValidityLabel.FontSize = MetroFramework.MetroLabelSize.Small;
+            this.userNameValidityLabel.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.userNameValidityLabel.ForeColor = System.Drawing.Color.Red;
+            this.userNameValidityLabel.Location = new System.Drawing.Point(142, 96);
+            this.userNameValidityLabel.Name = "userNameValidityLabel";
+            this.userNameValidityLabel.Size = new System.Drawing.Size(147, 15);
+            this.userNameValidityLabel.TabIndex = 51;
+            this.userNameValidityLabel.Text = "Username already exist!";
+            this.userNameValidityLabel.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.userNameValidityLabel.UseCustomForeColor = true;
+            this.userNameValidityLabel.Visible = false;
+            // 
+            // mbNovalidationLabel
+            // 
+            this.mbNovalidationLabel.FontSize = MetroFramework.MetroLabelSize.Small;
+            this.mbNovalidationLabel.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.mbNovalidationLabel.ForeColor = System.Drawing.Color.Red;
+            this.mbNovalidationLabel.Location = new System.Drawing.Point(528, 75);
+            this.mbNovalidationLabel.Name = "mbNovalidationLabel";
+            this.mbNovalidationLabel.Size = new System.Drawing.Size(150, 15);
+            this.mbNovalidationLabel.TabIndex = 50;
+            this.mbNovalidationLabel.Text = "Mobile Number is invalid!";
+            this.mbNovalidationLabel.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.mbNovalidationLabel.UseCustomForeColor = true;
+            this.mbNovalidationLabel.Visible = false;
+            // 
             // passConfiramtionLabel
             // 
             this.passConfiramtionLabel.FontSize = MetroFramework.MetroLabelSize.Small;
             this.passConfiramtionLabel.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.passConfiramtionLabel.ForeColor = System.Drawing.Color.Red;
-            this.passConfiramtionLabel.Location = new System.Drawing.Point(534, 125);
+            this.passConfiramtionLabel.Location = new System.Drawing.Point(527, 122);
             this.passConfiramtionLabel.Name = "passConfiramtionLabel";
             this.passConfiramtionLabel.Size = new System.Drawing.Size(150, 21);
             this.passConfiramtionLabel.TabIndex = 49;
@@ -133,7 +165,7 @@ namespace Blood_Donate_Management_System
             this.confirmPasswordTxtBox.CustomButton.Visible = false;
             this.confirmPasswordTxtBox.DisplayIcon = true;
             this.confirmPasswordTxtBox.Lines = new string[0];
-            this.confirmPasswordTxtBox.Location = new System.Drawing.Point(358, 118);
+            this.confirmPasswordTxtBox.Location = new System.Drawing.Point(358, 113);
             this.confirmPasswordTxtBox.MaxLength = 32767;
             this.confirmPasswordTxtBox.Name = "confirmPasswordTxtBox";
             this.confirmPasswordTxtBox.PasswordChar = '●';
@@ -169,7 +201,7 @@ namespace Blood_Donate_Management_System
             this.userNameTxtBox.CustomButton.Visible = false;
             this.userNameTxtBox.DisplayIcon = true;
             this.userNameTxtBox.Lines = new string[0];
-            this.userNameTxtBox.Location = new System.Drawing.Point(143, 77);
+            this.userNameTxtBox.Location = new System.Drawing.Point(144, 67);
             this.userNameTxtBox.MaxLength = 32767;
             this.userNameTxtBox.Name = "userNameTxtBox";
             this.userNameTxtBox.PasswordChar = '\0';
@@ -196,7 +228,7 @@ namespace Blood_Donate_Management_System
             this.createAccountButton.FontSize = MetroFramework.MetroButtonSize.Medium;
             this.createAccountButton.FontWeight = MetroFramework.MetroButtonWeight.Regular;
             this.createAccountButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.createAccountButton.Location = new System.Drawing.Point(143, 323);
+            this.createAccountButton.Location = new System.Drawing.Point(143, 315);
             this.createAccountButton.Name = "createAccountButton";
             this.createAccountButton.Size = new System.Drawing.Size(376, 36);
             this.createAccountButton.TabIndex = 46;
@@ -427,7 +459,7 @@ namespace Blood_Donate_Management_System
             this.newPasswordTxtBox.CustomButton.Visible = false;
             this.newPasswordTxtBox.DisplayIcon = true;
             this.newPasswordTxtBox.Lines = new string[0];
-            this.newPasswordTxtBox.Location = new System.Drawing.Point(143, 118);
+            this.newPasswordTxtBox.Location = new System.Drawing.Point(143, 113);
             this.newPasswordTxtBox.MaxLength = 32767;
             this.newPasswordTxtBox.Name = "newPasswordTxtBox";
             this.newPasswordTxtBox.PasswordChar = '●';
@@ -463,7 +495,7 @@ namespace Blood_Donate_Management_System
             this.mobileNumberTxtBox.CustomButton.Visible = false;
             this.mobileNumberTxtBox.DisplayIcon = true;
             this.mobileNumberTxtBox.Lines = new string[0];
-            this.mobileNumberTxtBox.Location = new System.Drawing.Point(358, 77);
+            this.mobileNumberTxtBox.Location = new System.Drawing.Point(358, 67);
             this.mobileNumberTxtBox.MaxLength = 32767;
             this.mobileNumberTxtBox.Name = "mobileNumberTxtBox";
             this.mobileNumberTxtBox.PasswordChar = '\0';
@@ -500,7 +532,7 @@ namespace Blood_Donate_Management_System
             this.surNametxtBox.CustomButton.Visible = false;
             this.surNametxtBox.DisplayIcon = true;
             this.surNametxtBox.Lines = new string[0];
-            this.surNametxtBox.Location = new System.Drawing.Point(358, 34);
+            this.surNametxtBox.Location = new System.Drawing.Point(358, 26);
             this.surNametxtBox.MaxLength = 32767;
             this.surNametxtBox.Name = "surNametxtBox";
             this.surNametxtBox.PasswordChar = '\0';
@@ -537,7 +569,7 @@ namespace Blood_Donate_Management_System
             this.firstNametxtBox.CustomButton.Visible = false;
             this.firstNametxtBox.DisplayIcon = true;
             this.firstNametxtBox.Lines = new string[0];
-            this.firstNametxtBox.Location = new System.Drawing.Point(143, 34);
+            this.firstNametxtBox.Location = new System.Drawing.Point(143, 26);
             this.firstNametxtBox.MaxLength = 32767;
             this.firstNametxtBox.Name = "firstNametxtBox";
             this.firstNametxtBox.PasswordChar = '\0';
@@ -560,7 +592,7 @@ namespace Blood_Donate_Management_System
             // 
             // signInBtn
             // 
-            this.signInBtn.Location = new System.Drawing.Point(233, 180);
+            this.signInBtn.Location = new System.Drawing.Point(233, 183);
             this.signInBtn.Name = "signInBtn";
             this.signInBtn.Size = new System.Drawing.Size(237, 24);
             this.signInBtn.TabIndex = 31;
@@ -644,7 +676,7 @@ namespace Blood_Donate_Management_System
             // 
             // signUpBtn
             // 
-            this.signUpBtn.Location = new System.Drawing.Point(232, 224);
+            this.signUpBtn.Location = new System.Drawing.Point(233, 225);
             this.signUpBtn.Name = "signUpBtn";
             this.signUpBtn.Size = new System.Drawing.Size(237, 24);
             this.signUpBtn.TabIndex = 28;
@@ -851,19 +883,19 @@ namespace Blood_Donate_Management_System
             this.metroButton1.UseStyleColors = true;
             this.metroButton1.Click += new System.EventHandler(this.metroButton1_Click);
             // 
-            // mbNovalidationLabel
+            // loginErrorMsgLabel
             // 
-            this.mbNovalidationLabel.FontSize = MetroFramework.MetroLabelSize.Small;
-            this.mbNovalidationLabel.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.mbNovalidationLabel.ForeColor = System.Drawing.Color.Red;
-            this.mbNovalidationLabel.Location = new System.Drawing.Point(533, 85);
-            this.mbNovalidationLabel.Name = "mbNovalidationLabel";
-            this.mbNovalidationLabel.Size = new System.Drawing.Size(150, 21);
-            this.mbNovalidationLabel.TabIndex = 50;
-            this.mbNovalidationLabel.Text = "Mobile Number is invalid!";
-            this.mbNovalidationLabel.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.mbNovalidationLabel.UseCustomForeColor = true;
-            this.mbNovalidationLabel.Visible = false;
+            this.loginErrorMsgLabel.FontSize = MetroFramework.MetroLabelSize.Small;
+            this.loginErrorMsgLabel.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.loginErrorMsgLabel.ForeColor = System.Drawing.Color.Red;
+            this.loginErrorMsgLabel.Location = new System.Drawing.Point(284, 162);
+            this.loginErrorMsgLabel.Name = "loginErrorMsgLabel";
+            this.loginErrorMsgLabel.Size = new System.Drawing.Size(188, 15);
+            this.loginErrorMsgLabel.TabIndex = 52;
+            this.loginErrorMsgLabel.Text = "Username or password is invalid!";
+            this.loginErrorMsgLabel.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.loginErrorMsgLabel.UseCustomForeColor = true;
+            this.loginErrorMsgLabel.Visible = false;
             // 
             // Form1
             // 
@@ -933,6 +965,8 @@ namespace Blood_Donate_Management_System
         private MetroFramework.Controls.MetroTextBox userNameTxtBox;
         private MetroFramework.Controls.MetroLabel passConfiramtionLabel;
         private MetroFramework.Controls.MetroLabel mbNovalidationLabel;
+        private MetroFramework.Controls.MetroLabel userNameValidityLabel;
+        private MetroFramework.Controls.MetroLabel loginErrorMsgLabel;
     }
 }
 

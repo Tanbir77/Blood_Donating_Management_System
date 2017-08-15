@@ -22,7 +22,5 @@ namespace Blood_Donate_Management_System
         public string bloodGroup { get; set; }
         public string mobileNo { get; set; }
         public string area { get; set; }
-    
-        public virtual Address Address { get; set; }
     }
 }

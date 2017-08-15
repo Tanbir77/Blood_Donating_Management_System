@@ -13,10 +13,10 @@ namespace Blood_Donate_Management_System
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class BDMSDBEntities3 : DbContext
+    public partial class BDMSDBEntities : DbContext
     {
-        public BDMSDBEntities3()
-            : base("name=BDMSDBEntities3")
+        public BDMSDBEntities()
+            : base("name=BDMSDBEntities")
         {
         }
     

@@ -30,7 +30,24 @@ namespace Blood_Donate_Management_System
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.loginPanel = new System.Windows.Forms.Panel();
+            this.findDonorPanel = new System.Windows.Forms.Panel();
+            this.donorProfilePanel = new System.Windows.Forms.Panel();
+            this.donorContactNoLabel = new System.Windows.Forms.Label();
+            this.donorAddreessLabel = new System.Windows.Forms.Label();
+            this.donorDonationDateLabel = new System.Windows.Forms.Label();
+            this.donorBloodGroupLabel = new System.Windows.Forms.Label();
+            this.donorNameLabel = new System.Windows.Forms.Label();
+            this.contactNoLabel = new System.Windows.Forms.Label();
+            this.addressLabel = new System.Windows.Forms.Label();
+            this.bloodGroupLabel = new System.Windows.Forms.Label();
+            this.DonationDateLabel = new System.Windows.Forms.Label();
+            this.DOBLabel = new System.Windows.Forms.Label();
+            this.sexLabel = new System.Windows.Forms.Label();
+            this.welcomeUserNameLabel = new System.Windows.Forms.Label();
+            this.welcomeLabel = new System.Windows.Forms.Label();
+            this.nameLabel = new System.Windows.Forms.Label();
+            this.donorPictureBox = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.loginErrorMsgLabel = new MetroFramework.Controls.MetroLabel();
@@ -58,11 +75,11 @@ namespace Blood_Donate_Management_System
             this.signUpBtn = new MetroFramework.Controls.MetroButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.metroButton5 = new MetroFramework.Controls.MetroButton();
-            this.metroButton3 = new MetroFramework.Controls.MetroButton();
-            this.metroButton2 = new MetroFramework.Controls.MetroButton();
+            this.loginMetroButton = new MetroFramework.Controls.MetroButton();
+            this.timeLineMetroButton = new MetroFramework.Controls.MetroButton();
+            this.aboutMetroButton = new MetroFramework.Controls.MetroButton();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.searchDonortoolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.dhakaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.khulnaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.chittagongToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -70,49 +87,289 @@ namespace Blood_Donate_Management_System
             this.rajshahiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.barisalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rangpurToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.metroButton1 = new MetroFramework.Controls.MetroButton();
-            this.metroButton4 = new MetroFramework.Controls.MetroButton();
-            this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
-            this.findDonorPanel = new System.Windows.Forms.Panel();
-            this.panel1.SuspendLayout();
+            this.homeMetroButton = new MetroFramework.Controls.MetroButton();
+            this.contactMetroButton = new MetroFramework.Controls.MetroButton();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.uploadImgMetroButton = new MetroFramework.Controls.MetroButton();
+            this.donorSexLabel = new System.Windows.Forms.Label();
+            this.donorDOBLabel = new System.Windows.Forms.Label();
+            this.loginPanel.SuspendLayout();
+            this.findDonorPanel.SuspendLayout();
+            this.donorProfilePanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.donorPictureBox)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
-            this.findDonorPanel.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
+            // loginPanel
             // 
-            this.panel1.Controls.Add(this.findDonorPanel);
-            this.panel1.Controls.Add(this.loginErrorMsgLabel);
-            this.panel1.Controls.Add(this.userNameValidityLabel);
-            this.panel1.Controls.Add(this.mbNovalidationLabel);
-            this.panel1.Controls.Add(this.passConfiramtionLabel);
-            this.panel1.Controls.Add(this.confirmPasswordTxtBox);
-            this.panel1.Controls.Add(this.userNameTxtBox);
-            this.panel1.Controls.Add(this.createAccountButton);
-            this.panel1.Controls.Add(this.districtComboBox);
-            this.panel1.Controls.Add(this.bloodGroupComboBox);
-            this.panel1.Controls.Add(this.birthYearTxtBox);
-            this.panel1.Controls.Add(this.birthDayTxtBox);
-            this.panel1.Controls.Add(this.birthMonthComboBox);
-            this.panel1.Controls.Add(this.femaleRadioButton);
-            this.panel1.Controls.Add(this.maleRadioButton);
-            this.panel1.Controls.Add(this.areaTxtBox);
-            this.panel1.Controls.Add(this.newPasswordTxtBox);
-            this.panel1.Controls.Add(this.mobileNumberTxtBox);
-            this.panel1.Controls.Add(this.surNametxtBox);
-            this.panel1.Controls.Add(this.firstNametxtBox);
-            this.panel1.Controls.Add(this.signInBtn);
-            this.panel1.Controls.Add(this.passwordTxtBox);
-            this.panel1.Controls.Add(this.loginUserNameTxtBox);
-            this.panel1.Controls.Add(this.signUpBtn);
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Location = new System.Drawing.Point(0, 90);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(683, 385);
-            this.panel1.TabIndex = 0;
+            this.loginPanel.Controls.Add(this.findDonorPanel);
+            this.loginPanel.Controls.Add(this.loginErrorMsgLabel);
+            this.loginPanel.Controls.Add(this.userNameValidityLabel);
+            this.loginPanel.Controls.Add(this.mbNovalidationLabel);
+            this.loginPanel.Controls.Add(this.passConfiramtionLabel);
+            this.loginPanel.Controls.Add(this.confirmPasswordTxtBox);
+            this.loginPanel.Controls.Add(this.userNameTxtBox);
+            this.loginPanel.Controls.Add(this.createAccountButton);
+            this.loginPanel.Controls.Add(this.districtComboBox);
+            this.loginPanel.Controls.Add(this.bloodGroupComboBox);
+            this.loginPanel.Controls.Add(this.birthYearTxtBox);
+            this.loginPanel.Controls.Add(this.birthDayTxtBox);
+            this.loginPanel.Controls.Add(this.birthMonthComboBox);
+            this.loginPanel.Controls.Add(this.femaleRadioButton);
+            this.loginPanel.Controls.Add(this.maleRadioButton);
+            this.loginPanel.Controls.Add(this.areaTxtBox);
+            this.loginPanel.Controls.Add(this.newPasswordTxtBox);
+            this.loginPanel.Controls.Add(this.mobileNumberTxtBox);
+            this.loginPanel.Controls.Add(this.surNametxtBox);
+            this.loginPanel.Controls.Add(this.firstNametxtBox);
+            this.loginPanel.Controls.Add(this.signInBtn);
+            this.loginPanel.Controls.Add(this.passwordTxtBox);
+            this.loginPanel.Controls.Add(this.loginUserNameTxtBox);
+            this.loginPanel.Controls.Add(this.signUpBtn);
+            this.loginPanel.Controls.Add(this.pictureBox1);
+            this.loginPanel.Location = new System.Drawing.Point(0, 90);
+            this.loginPanel.Name = "loginPanel";
+            this.loginPanel.Size = new System.Drawing.Size(683, 385);
+            this.loginPanel.TabIndex = 0;
+            // 
+            // findDonorPanel
+            // 
+            this.findDonorPanel.AutoScroll = true;
+            this.findDonorPanel.Controls.Add(this.donorProfilePanel);
+            this.findDonorPanel.Controls.Add(this.panel3);
+            this.findDonorPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.findDonorPanel.Location = new System.Drawing.Point(0, 0);
+            this.findDonorPanel.Name = "findDonorPanel";
+            this.findDonorPanel.Size = new System.Drawing.Size(683, 385);
+            this.findDonorPanel.TabIndex = 53;
+            this.findDonorPanel.Visible = false;
+            // 
+            // donorProfilePanel
+            // 
+            this.donorProfilePanel.Controls.Add(this.uploadImgMetroButton);
+            this.donorProfilePanel.Controls.Add(this.donorContactNoLabel);
+            this.donorProfilePanel.Controls.Add(this.donorAddreessLabel);
+            this.donorProfilePanel.Controls.Add(this.donorDonationDateLabel);
+            this.donorProfilePanel.Controls.Add(this.donorBloodGroupLabel);
+            this.donorProfilePanel.Controls.Add(this.donorDOBLabel);
+            this.donorProfilePanel.Controls.Add(this.donorSexLabel);
+            this.donorProfilePanel.Controls.Add(this.donorNameLabel);
+            this.donorProfilePanel.Controls.Add(this.contactNoLabel);
+            this.donorProfilePanel.Controls.Add(this.addressLabel);
+            this.donorProfilePanel.Controls.Add(this.bloodGroupLabel);
+            this.donorProfilePanel.Controls.Add(this.DonationDateLabel);
+            this.donorProfilePanel.Controls.Add(this.DOBLabel);
+            this.donorProfilePanel.Controls.Add(this.sexLabel);
+            this.donorProfilePanel.Controls.Add(this.welcomeUserNameLabel);
+            this.donorProfilePanel.Controls.Add(this.welcomeLabel);
+            this.donorProfilePanel.Controls.Add(this.nameLabel);
+            this.donorProfilePanel.Controls.Add(this.donorPictureBox);
+            this.donorProfilePanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.donorProfilePanel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.donorProfilePanel.Location = new System.Drawing.Point(0, 0);
+            this.donorProfilePanel.Name = "donorProfilePanel";
+            this.donorProfilePanel.Size = new System.Drawing.Size(683, 385);
+            this.donorProfilePanel.TabIndex = 2;
+            this.donorProfilePanel.Visible = false;
+            // 
+            // donorContactNoLabel
+            // 
+            this.donorContactNoLabel.BackColor = System.Drawing.Color.Gainsboro;
+            this.donorContactNoLabel.Font = new System.Drawing.Font("Lucida Calligraphy", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.donorContactNoLabel.ForeColor = System.Drawing.Color.Blue;
+            this.donorContactNoLabel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.donorContactNoLabel.Location = new System.Drawing.Point(130, 337);
+            this.donorContactNoLabel.Margin = new System.Windows.Forms.Padding(3);
+            this.donorContactNoLabel.Name = "donorContactNoLabel";
+            this.donorContactNoLabel.Size = new System.Drawing.Size(366, 34);
+            this.donorContactNoLabel.TabIndex = 25;
+            this.donorContactNoLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // donorAddreessLabel
+            // 
+            this.donorAddreessLabel.BackColor = System.Drawing.Color.Gainsboro;
+            this.donorAddreessLabel.Font = new System.Drawing.Font("Lucida Calligraphy", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.donorAddreessLabel.ForeColor = System.Drawing.Color.Blue;
+            this.donorAddreessLabel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.donorAddreessLabel.Location = new System.Drawing.Point(130, 294);
+            this.donorAddreessLabel.Margin = new System.Windows.Forms.Padding(3);
+            this.donorAddreessLabel.Name = "donorAddreessLabel";
+            this.donorAddreessLabel.Size = new System.Drawing.Size(366, 34);
+            this.donorAddreessLabel.TabIndex = 24;
+            this.donorAddreessLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // donorDonationDateLabel
+            // 
+            this.donorDonationDateLabel.BackColor = System.Drawing.Color.Gainsboro;
+            this.donorDonationDateLabel.Font = new System.Drawing.Font("Lucida Calligraphy", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.donorDonationDateLabel.ForeColor = System.Drawing.Color.Blue;
+            this.donorDonationDateLabel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.donorDonationDateLabel.Location = new System.Drawing.Point(130, 251);
+            this.donorDonationDateLabel.Margin = new System.Windows.Forms.Padding(3);
+            this.donorDonationDateLabel.Name = "donorDonationDateLabel";
+            this.donorDonationDateLabel.Size = new System.Drawing.Size(366, 34);
+            this.donorDonationDateLabel.TabIndex = 23;
+            this.donorDonationDateLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // donorBloodGroupLabel
+            // 
+            this.donorBloodGroupLabel.BackColor = System.Drawing.Color.Gainsboro;
+            this.donorBloodGroupLabel.Font = new System.Drawing.Font("Lucida Calligraphy", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.donorBloodGroupLabel.ForeColor = System.Drawing.Color.Blue;
+            this.donorBloodGroupLabel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.donorBloodGroupLabel.Location = new System.Drawing.Point(130, 208);
+            this.donorBloodGroupLabel.Margin = new System.Windows.Forms.Padding(3);
+            this.donorBloodGroupLabel.Name = "donorBloodGroupLabel";
+            this.donorBloodGroupLabel.Size = new System.Drawing.Size(366, 34);
+            this.donorBloodGroupLabel.TabIndex = 22;
+            this.donorBloodGroupLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // donorNameLabel
+            // 
+            this.donorNameLabel.BackColor = System.Drawing.Color.Gainsboro;
+            this.donorNameLabel.Enabled = false;
+            this.donorNameLabel.Font = new System.Drawing.Font("Lucida Calligraphy", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.donorNameLabel.ForeColor = System.Drawing.Color.Blue;
+            this.donorNameLabel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.donorNameLabel.Location = new System.Drawing.Point(130, 79);
+            this.donorNameLabel.Margin = new System.Windows.Forms.Padding(3);
+            this.donorNameLabel.Name = "donorNameLabel";
+            this.donorNameLabel.Size = new System.Drawing.Size(366, 34);
+            this.donorNameLabel.TabIndex = 19;
+            this.donorNameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // contactNoLabel
+            // 
+            this.contactNoLabel.BackColor = System.Drawing.Color.Gainsboro;
+            this.contactNoLabel.Font = new System.Drawing.Font("Lucida Calligraphy", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.contactNoLabel.ForeColor = System.Drawing.Color.Blue;
+            this.contactNoLabel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.contactNoLabel.Location = new System.Drawing.Point(51, 337);
+            this.contactNoLabel.Margin = new System.Windows.Forms.Padding(3);
+            this.contactNoLabel.Name = "contactNoLabel";
+            this.contactNoLabel.Size = new System.Drawing.Size(73, 34);
+            this.contactNoLabel.TabIndex = 18;
+            this.contactNoLabel.Text = "Contact No ";
+            this.contactNoLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // addressLabel
+            // 
+            this.addressLabel.BackColor = System.Drawing.Color.Gainsboro;
+            this.addressLabel.Font = new System.Drawing.Font("Lucida Calligraphy", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addressLabel.ForeColor = System.Drawing.Color.Blue;
+            this.addressLabel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.addressLabel.Location = new System.Drawing.Point(51, 294);
+            this.addressLabel.Margin = new System.Windows.Forms.Padding(3);
+            this.addressLabel.Name = "addressLabel";
+            this.addressLabel.Size = new System.Drawing.Size(73, 34);
+            this.addressLabel.TabIndex = 17;
+            this.addressLabel.Text = "Address ";
+            this.addressLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // bloodGroupLabel
+            // 
+            this.bloodGroupLabel.BackColor = System.Drawing.Color.Gainsboro;
+            this.bloodGroupLabel.Font = new System.Drawing.Font("Lucida Calligraphy", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bloodGroupLabel.ForeColor = System.Drawing.Color.Blue;
+            this.bloodGroupLabel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bloodGroupLabel.Location = new System.Drawing.Point(51, 208);
+            this.bloodGroupLabel.Margin = new System.Windows.Forms.Padding(3);
+            this.bloodGroupLabel.Name = "bloodGroupLabel";
+            this.bloodGroupLabel.Size = new System.Drawing.Size(73, 34);
+            this.bloodGroupLabel.TabIndex = 16;
+            this.bloodGroupLabel.Text = "Blood Group ";
+            this.bloodGroupLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // DonationDateLabel
+            // 
+            this.DonationDateLabel.BackColor = System.Drawing.Color.Gainsboro;
+            this.DonationDateLabel.Font = new System.Drawing.Font("Lucida Calligraphy", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DonationDateLabel.ForeColor = System.Drawing.Color.Blue;
+            this.DonationDateLabel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.DonationDateLabel.Location = new System.Drawing.Point(51, 251);
+            this.DonationDateLabel.Margin = new System.Windows.Forms.Padding(3);
+            this.DonationDateLabel.Name = "DonationDateLabel";
+            this.DonationDateLabel.Size = new System.Drawing.Size(73, 34);
+            this.DonationDateLabel.TabIndex = 15;
+            this.DonationDateLabel.Text = "Last Donate ";
+            this.DonationDateLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // DOBLabel
+            // 
+            this.DOBLabel.BackColor = System.Drawing.Color.Gainsboro;
+            this.DOBLabel.Font = new System.Drawing.Font("Lucida Calligraphy", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DOBLabel.ForeColor = System.Drawing.Color.Blue;
+            this.DOBLabel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.DOBLabel.Location = new System.Drawing.Point(51, 165);
+            this.DOBLabel.Margin = new System.Windows.Forms.Padding(3);
+            this.DOBLabel.Name = "DOBLabel";
+            this.DOBLabel.Size = new System.Drawing.Size(73, 34);
+            this.DOBLabel.TabIndex = 14;
+            this.DOBLabel.Text = "DOB ";
+            this.DOBLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // sexLabel
+            // 
+            this.sexLabel.BackColor = System.Drawing.Color.Gainsboro;
+            this.sexLabel.Font = new System.Drawing.Font("Lucida Calligraphy", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sexLabel.ForeColor = System.Drawing.Color.Blue;
+            this.sexLabel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.sexLabel.Location = new System.Drawing.Point(51, 122);
+            this.sexLabel.Margin = new System.Windows.Forms.Padding(3);
+            this.sexLabel.Name = "sexLabel";
+            this.sexLabel.Size = new System.Drawing.Size(73, 34);
+            this.sexLabel.TabIndex = 13;
+            this.sexLabel.Text = "Sex ";
+            this.sexLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // welcomeUserNameLabel
+            // 
+            this.welcomeUserNameLabel.BackColor = System.Drawing.Color.White;
+            this.welcomeUserNameLabel.Font = new System.Drawing.Font("Monotype Corsiva", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.welcomeUserNameLabel.Location = new System.Drawing.Point(132, 15);
+            this.welcomeUserNameLabel.Margin = new System.Windows.Forms.Padding(3);
+            this.welcomeUserNameLabel.Name = "welcomeUserNameLabel";
+            this.welcomeUserNameLabel.Size = new System.Drawing.Size(337, 56);
+            this.welcomeUserNameLabel.TabIndex = 12;
+            this.welcomeUserNameLabel.Text = "Welcome";
+            this.welcomeUserNameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // welcomeLabel
+            // 
+            this.welcomeLabel.BackColor = System.Drawing.Color.White;
+            this.welcomeLabel.Font = new System.Drawing.Font("Monotype Corsiva", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.welcomeLabel.Location = new System.Drawing.Point(34, 15);
+            this.welcomeLabel.Margin = new System.Windows.Forms.Padding(3);
+            this.welcomeLabel.Name = "welcomeLabel";
+            this.welcomeLabel.Size = new System.Drawing.Size(110, 56);
+            this.welcomeLabel.TabIndex = 11;
+            this.welcomeLabel.Text = "Welcome";
+            this.welcomeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // nameLabel
+            // 
+            this.nameLabel.BackColor = System.Drawing.Color.Gainsboro;
+            this.nameLabel.Font = new System.Drawing.Font("Lucida Calligraphy", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nameLabel.ForeColor = System.Drawing.Color.Blue;
+            this.nameLabel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.nameLabel.Location = new System.Drawing.Point(51, 79);
+            this.nameLabel.Margin = new System.Windows.Forms.Padding(3);
+            this.nameLabel.Name = "nameLabel";
+            this.nameLabel.Size = new System.Drawing.Size(73, 34);
+            this.nameLabel.TabIndex = 7;
+            this.nameLabel.Text = "Name ";
+            this.nameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // donorPictureBox
+            // 
+            this.donorPictureBox.Location = new System.Drawing.Point(513, 77);
+            this.donorPictureBox.Name = "donorPictureBox";
+            this.donorPictureBox.Size = new System.Drawing.Size(158, 172);
+            this.donorPictureBox.TabIndex = 0;
+            this.donorPictureBox.TabStop = false;
             // 
             // panel3
             // 
@@ -736,66 +993,66 @@ namespace Blood_Donate_Management_System
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.panel2.Controls.Add(this.metroButton5);
-            this.panel2.Controls.Add(this.metroButton3);
-            this.panel2.Controls.Add(this.metroButton2);
+            this.panel2.Controls.Add(this.loginMetroButton);
+            this.panel2.Controls.Add(this.timeLineMetroButton);
+            this.panel2.Controls.Add(this.aboutMetroButton);
             this.panel2.Controls.Add(this.menuStrip1);
-            this.panel2.Controls.Add(this.metroButton1);
-            this.panel2.Controls.Add(this.metroButton4);
+            this.panel2.Controls.Add(this.homeMetroButton);
+            this.panel2.Controls.Add(this.contactMetroButton);
             this.panel2.Location = new System.Drawing.Point(0, 55);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(683, 33);
             this.panel2.TabIndex = 1;
             // 
-            // metroButton5
+            // loginMetroButton
             // 
-            this.metroButton5.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.metroButton5.FontSize = MetroFramework.MetroButtonSize.Medium;
-            this.metroButton5.FontWeight = MetroFramework.MetroButtonWeight.Regular;
-            this.metroButton5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.metroButton5.Location = new System.Drawing.Point(595, -1);
-            this.metroButton5.Name = "metroButton5";
-            this.metroButton5.Size = new System.Drawing.Size(88, 35);
-            this.metroButton5.TabIndex = 6;
-            this.metroButton5.Text = "Login";
-            this.metroButton5.UseCustomBackColor = true;
-            this.metroButton5.UseCustomForeColor = true;
-            this.metroButton5.UseSelectable = true;
-            this.metroButton5.UseStyleColors = true;
-            this.metroButton5.Click += new System.EventHandler(this.metroButton5_Click);
+            this.loginMetroButton.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.loginMetroButton.FontSize = MetroFramework.MetroButtonSize.Medium;
+            this.loginMetroButton.FontWeight = MetroFramework.MetroButtonWeight.Regular;
+            this.loginMetroButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.loginMetroButton.Location = new System.Drawing.Point(595, -1);
+            this.loginMetroButton.Name = "loginMetroButton";
+            this.loginMetroButton.Size = new System.Drawing.Size(88, 35);
+            this.loginMetroButton.TabIndex = 6;
+            this.loginMetroButton.Text = "Login";
+            this.loginMetroButton.UseCustomBackColor = true;
+            this.loginMetroButton.UseCustomForeColor = true;
+            this.loginMetroButton.UseSelectable = true;
+            this.loginMetroButton.UseStyleColors = true;
+            this.loginMetroButton.Click += new System.EventHandler(this.metroButton5_Click);
             // 
-            // metroButton3
+            // timeLineMetroButton
             // 
-            this.metroButton3.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.metroButton3.FontSize = MetroFramework.MetroButtonSize.Medium;
-            this.metroButton3.FontWeight = MetroFramework.MetroButtonWeight.Regular;
-            this.metroButton3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.metroButton3.Location = new System.Drawing.Point(282, 0);
-            this.metroButton3.Name = "metroButton3";
-            this.metroButton3.Size = new System.Drawing.Size(88, 35);
-            this.metroButton3.TabIndex = 5;
-            this.metroButton3.Text = "Timeline";
-            this.metroButton3.UseCustomBackColor = true;
-            this.metroButton3.UseCustomForeColor = true;
-            this.metroButton3.UseSelectable = true;
-            this.metroButton3.UseStyleColors = true;
+            this.timeLineMetroButton.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.timeLineMetroButton.FontSize = MetroFramework.MetroButtonSize.Medium;
+            this.timeLineMetroButton.FontWeight = MetroFramework.MetroButtonWeight.Regular;
+            this.timeLineMetroButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.timeLineMetroButton.Location = new System.Drawing.Point(282, 0);
+            this.timeLineMetroButton.Name = "timeLineMetroButton";
+            this.timeLineMetroButton.Size = new System.Drawing.Size(88, 35);
+            this.timeLineMetroButton.TabIndex = 5;
+            this.timeLineMetroButton.Text = "Timeline";
+            this.timeLineMetroButton.UseCustomBackColor = true;
+            this.timeLineMetroButton.UseCustomForeColor = true;
+            this.timeLineMetroButton.UseSelectable = true;
+            this.timeLineMetroButton.UseStyleColors = true;
             // 
-            // metroButton2
+            // aboutMetroButton
             // 
-            this.metroButton2.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.metroButton2.FontSize = MetroFramework.MetroButtonSize.Medium;
-            this.metroButton2.FontWeight = MetroFramework.MetroButtonWeight.Regular;
-            this.metroButton2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.metroButton2.Location = new System.Drawing.Point(88, -2);
-            this.metroButton2.Margin = new System.Windows.Forms.Padding(0);
-            this.metroButton2.Name = "metroButton2";
-            this.metroButton2.Size = new System.Drawing.Size(92, 36);
-            this.metroButton2.TabIndex = 6;
-            this.metroButton2.Text = "About";
-            this.metroButton2.UseCustomBackColor = true;
-            this.metroButton2.UseCustomForeColor = true;
-            this.metroButton2.UseSelectable = true;
-            this.metroButton2.UseStyleColors = true;
+            this.aboutMetroButton.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.aboutMetroButton.FontSize = MetroFramework.MetroButtonSize.Medium;
+            this.aboutMetroButton.FontWeight = MetroFramework.MetroButtonWeight.Regular;
+            this.aboutMetroButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.aboutMetroButton.Location = new System.Drawing.Point(88, -2);
+            this.aboutMetroButton.Margin = new System.Windows.Forms.Padding(0);
+            this.aboutMetroButton.Name = "aboutMetroButton";
+            this.aboutMetroButton.Size = new System.Drawing.Size(92, 36);
+            this.aboutMetroButton.TabIndex = 6;
+            this.aboutMetroButton.Text = "About";
+            this.aboutMetroButton.UseCustomBackColor = true;
+            this.aboutMetroButton.UseCustomForeColor = true;
+            this.aboutMetroButton.UseSelectable = true;
+            this.aboutMetroButton.UseStyleColors = true;
             // 
             // menuStrip1
             // 
@@ -804,21 +1061,21 @@ namespace Blood_Donate_Management_System
             this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
             this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(0);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem1});
+            this.searchDonortoolStripMenuItem1});
             this.menuStrip1.Location = new System.Drawing.Point(177, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(147, 33);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // toolStripMenuItem1
+            // searchDonortoolStripMenuItem1
             // 
-            this.toolStripMenuItem1.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-            this.toolStripMenuItem1.AutoSize = false;
-            this.toolStripMenuItem1.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.toolStripMenuItem1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.toolStripMenuItem1.CheckOnClick = true;
-            this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.searchDonortoolStripMenuItem1.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.searchDonortoolStripMenuItem1.AutoSize = false;
+            this.searchDonortoolStripMenuItem1.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.searchDonortoolStripMenuItem1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.searchDonortoolStripMenuItem1.CheckOnClick = true;
+            this.searchDonortoolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.dhakaToolStripMenuItem,
             this.khulnaToolStripMenuItem,
             this.chittagongToolStripMenuItem,
@@ -826,11 +1083,11 @@ namespace Blood_Donate_Management_System
             this.rajshahiToolStripMenuItem,
             this.barisalToolStripMenuItem,
             this.rangpurToolStripMenuItem});
-            this.toolStripMenuItem1.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripMenuItem1.ForeColor = System.Drawing.Color.White;
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(97, 29);
-            this.toolStripMenuItem1.Text = "Search Donor";
+            this.searchDonortoolStripMenuItem1.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchDonortoolStripMenuItem1.ForeColor = System.Drawing.Color.White;
+            this.searchDonortoolStripMenuItem1.Name = "searchDonortoolStripMenuItem1";
+            this.searchDonortoolStripMenuItem1.Size = new System.Drawing.Size(97, 29);
+            this.searchDonortoolStripMenuItem1.Text = "Search Donor";
             // 
             // dhakaToolStripMenuItem
             // 
@@ -889,57 +1146,90 @@ namespace Blood_Donate_Management_System
             this.rangpurToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.rangpurToolStripMenuItem.Text = "Rangpur";
             // 
-            // metroButton1
+            // homeMetroButton
             // 
-            this.metroButton1.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.metroButton1.FontSize = MetroFramework.MetroButtonSize.Medium;
-            this.metroButton1.FontWeight = MetroFramework.MetroButtonWeight.Regular;
-            this.metroButton1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.metroButton1.Location = new System.Drawing.Point(-7, -1);
-            this.metroButton1.Name = "metroButton1";
-            this.metroButton1.Size = new System.Drawing.Size(96, 35);
-            this.metroButton1.TabIndex = 4;
-            this.metroButton1.Text = "Home";
-            this.metroButton1.UseCustomBackColor = true;
-            this.metroButton1.UseCustomForeColor = true;
-            this.metroButton1.UseSelectable = true;
-            this.metroButton1.UseStyleColors = true;
+            this.homeMetroButton.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.homeMetroButton.FontSize = MetroFramework.MetroButtonSize.Medium;
+            this.homeMetroButton.FontWeight = MetroFramework.MetroButtonWeight.Regular;
+            this.homeMetroButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.homeMetroButton.Location = new System.Drawing.Point(-7, -1);
+            this.homeMetroButton.Name = "homeMetroButton";
+            this.homeMetroButton.Size = new System.Drawing.Size(96, 35);
+            this.homeMetroButton.TabIndex = 4;
+            this.homeMetroButton.Text = "Home";
+            this.homeMetroButton.UseCustomBackColor = true;
+            this.homeMetroButton.UseCustomForeColor = true;
+            this.homeMetroButton.UseSelectable = true;
+            this.homeMetroButton.UseStyleColors = true;
+            this.homeMetroButton.Click += new System.EventHandler(this.metroButton1_Click);
             // 
-            // metroButton4
+            // contactMetroButton
             // 
-            this.metroButton4.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.metroButton4.FontSize = MetroFramework.MetroButtonSize.Medium;
-            this.metroButton4.FontWeight = MetroFramework.MetroButtonWeight.Regular;
-            this.metroButton4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.metroButton4.Location = new System.Drawing.Point(366, 0);
-            this.metroButton4.Name = "metroButton4";
-            this.metroButton4.Size = new System.Drawing.Size(88, 35);
-            this.metroButton4.TabIndex = 5;
-            this.metroButton4.Text = "Contact";
-            this.metroButton4.UseCustomBackColor = true;
-            this.metroButton4.UseCustomForeColor = true;
-            this.metroButton4.UseSelectable = true;
-            this.metroButton4.UseStyleColors = true;
+            this.contactMetroButton.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.contactMetroButton.FontSize = MetroFramework.MetroButtonSize.Medium;
+            this.contactMetroButton.FontWeight = MetroFramework.MetroButtonWeight.Regular;
+            this.contactMetroButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.contactMetroButton.Location = new System.Drawing.Point(366, 0);
+            this.contactMetroButton.Name = "contactMetroButton";
+            this.contactMetroButton.Size = new System.Drawing.Size(88, 35);
+            this.contactMetroButton.TabIndex = 5;
+            this.contactMetroButton.Text = "Contact";
+            this.contactMetroButton.UseCustomBackColor = true;
+            this.contactMetroButton.UseCustomForeColor = true;
+            this.contactMetroButton.UseSelectable = true;
+            this.contactMetroButton.UseStyleColors = true;
             // 
-            // findDonorPanel
-            //
-            this.findDonorPanel.HorizontalScroll.Maximum = 0;
-            this.findDonorPanel.VerticalScroll.Visible = false;
-            this.findDonorPanel.AutoScroll = true;
-            this.findDonorPanel.Controls.Add(this.panel3);
-            this.findDonorPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.findDonorPanel.Location = new System.Drawing.Point(0, 0);
-            this.findDonorPanel.Name = "findDonorPanel";
-            this.findDonorPanel.Size = new System.Drawing.Size(683, 385);
-            this.findDonorPanel.TabIndex = 53;
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // uploadImgMetroButton
+            // 
+            this.uploadImgMetroButton.BackColor = System.Drawing.Color.Lavender;
+            this.uploadImgMetroButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.uploadImgMetroButton.Location = new System.Drawing.Point(515, 251);
+            this.uploadImgMetroButton.Name = "uploadImgMetroButton";
+            this.uploadImgMetroButton.Size = new System.Drawing.Size(146, 23);
+            this.uploadImgMetroButton.TabIndex = 26;
+            this.uploadImgMetroButton.Text = "Upload Image";
+            this.uploadImgMetroButton.UseCustomBackColor = true;
+            this.uploadImgMetroButton.UseCustomForeColor = true;
+            this.uploadImgMetroButton.UseSelectable = true;
+            this.uploadImgMetroButton.Click += new System.EventHandler(this.metroButton1_Click_1);
+            // 
+            // donorSexLabel
+            // 
+            this.donorSexLabel.BackColor = System.Drawing.Color.Gainsboro;
+            this.donorSexLabel.Font = new System.Drawing.Font("Lucida Calligraphy", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.donorSexLabel.ForeColor = System.Drawing.Color.Blue;
+            this.donorSexLabel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.donorSexLabel.Location = new System.Drawing.Point(130, 122);
+            this.donorSexLabel.Margin = new System.Windows.Forms.Padding(3);
+            this.donorSexLabel.Name = "donorSexLabel";
+            this.donorSexLabel.Size = new System.Drawing.Size(366, 34);
+            this.donorSexLabel.TabIndex = 20;
+            this.donorSexLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // donorDOBLabel
+            // 
+            this.donorDOBLabel.BackColor = System.Drawing.Color.Gainsboro;
+            this.donorDOBLabel.Font = new System.Drawing.Font("Lucida Calligraphy", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.donorDOBLabel.ForeColor = System.Drawing.Color.Blue;
+            this.donorDOBLabel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.donorDOBLabel.Location = new System.Drawing.Point(130, 167);
+            this.donorDOBLabel.Margin = new System.Windows.Forms.Padding(3);
+            this.donorDOBLabel.Name = "donorDOBLabel";
+            this.donorDOBLabel.Size = new System.Drawing.Size(366, 34);
+            this.donorDOBLabel.TabIndex = 21;
+            this.donorDOBLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(682, 478);
+            this.ClientSize = new System.Drawing.Size(682, 467);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.loginPanel);
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.Padding = new System.Windows.Forms.Padding(0, 60, 0, 0);
@@ -947,15 +1237,18 @@ namespace Blood_Donate_Management_System
             this.Style = MetroFramework.MetroColorStyle.Default;
             this.Text = "Blood Donating Management System ";
             this.TextAlign = MetroFramework.Forms.MetroFormTextAlign.Center;
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.Load += new System.EventHandler(this.Form1_Load);
+            this.loginPanel.ResumeLayout(false);
+            this.loginPanel.PerformLayout();
+            this.findDonorPanel.ResumeLayout(false);
+            this.donorProfilePanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.donorPictureBox)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            this.findDonorPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -966,12 +1259,12 @@ namespace Blood_Donate_Management_System
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel loginPanel;
         private System.Windows.Forms.Panel panel2;
-        private MetroFramework.Controls.MetroButton metroButton1;
-        private MetroFramework.Controls.MetroButton metroButton2;
+        private MetroFramework.Controls.MetroButton homeMetroButton;
+        private MetroFramework.Controls.MetroButton aboutMetroButton;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem searchDonortoolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem dhakaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem khulnaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem chittagongToolStripMenuItem;
@@ -979,9 +1272,27 @@ namespace Blood_Donate_Management_System
         private System.Windows.Forms.ToolStripMenuItem rajshahiToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem barisalToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem rangpurToolStripMenuItem;
-        private MetroFramework.Controls.MetroButton metroButton5;
-        private MetroFramework.Controls.MetroButton metroButton4;
-        private MetroFramework.Controls.MetroButton metroButton3;
+        private MetroFramework.Controls.MetroButton loginMetroButton;
+        private MetroFramework.Controls.MetroButton contactMetroButton;
+        private MetroFramework.Controls.MetroButton timeLineMetroButton;
+        private System.Windows.Forms.Panel findDonorPanel;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label1;
+        private MetroFramework.Controls.MetroLabel loginErrorMsgLabel;
+        private MetroFramework.Controls.MetroLabel userNameValidityLabel;
+        private MetroFramework.Controls.MetroLabel mbNovalidationLabel;
+        private MetroFramework.Controls.MetroLabel passConfiramtionLabel;
+        private MetroFramework.Controls.MetroTextBox confirmPasswordTxtBox;
+        private MetroFramework.Controls.MetroTextBox userNameTxtBox;
+        private MetroFramework.Controls.MetroButton createAccountButton;
+        private MetroFramework.Controls.MetroComboBox districtComboBox;
+        private MetroFramework.Controls.MetroComboBox bloodGroupComboBox;
+        private MetroFramework.Controls.MetroTextBox birthYearTxtBox;
+        private MetroFramework.Controls.MetroTextBox birthDayTxtBox;
+        private MetroFramework.Controls.MetroComboBox birthMonthComboBox;
+        private System.Windows.Forms.RadioButton femaleRadioButton;
+        private System.Windows.Forms.RadioButton maleRadioButton;
+        private MetroFramework.Controls.MetroTextBox areaTxtBox;
         private MetroFramework.Controls.MetroTextBox newPasswordTxtBox;
         private MetroFramework.Controls.MetroTextBox mobileNumberTxtBox;
         private MetroFramework.Controls.MetroTextBox surNametxtBox;
@@ -991,25 +1302,26 @@ namespace Blood_Donate_Management_System
         private MetroFramework.Controls.MetroTextBox loginUserNameTxtBox;
         private MetroFramework.Controls.MetroButton signUpBtn;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.RadioButton maleRadioButton;
-        private MetroFramework.Controls.MetroTextBox areaTxtBox;
-        private System.Windows.Forms.RadioButton femaleRadioButton;
-        private MetroFramework.Controls.MetroComboBox birthMonthComboBox;
-        private MetroFramework.Controls.MetroTextBox birthDayTxtBox;
-        private MetroFramework.Controls.MetroComboBox bloodGroupComboBox;
-        private MetroFramework.Controls.MetroTextBox birthYearTxtBox;
-        private MetroFramework.Controls.MetroComboBox districtComboBox;
-        private MetroFramework.Controls.MetroButton createAccountButton;
-        private MetroFramework.Controls.MetroTextBox confirmPasswordTxtBox;
-        private MetroFramework.Controls.MetroTextBox userNameTxtBox;
-        private MetroFramework.Controls.MetroLabel passConfiramtionLabel;
-        private MetroFramework.Controls.MetroLabel mbNovalidationLabel;
-        private MetroFramework.Controls.MetroLabel userNameValidityLabel;
-        private MetroFramework.Controls.MetroLabel loginErrorMsgLabel;
-        private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel findDonorPanel;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.Panel donorProfilePanel;
+        private System.Windows.Forms.Label donorContactNoLabel;
+        private System.Windows.Forms.Label donorAddreessLabel;
+        private System.Windows.Forms.Label donorDonationDateLabel;
+        private System.Windows.Forms.Label donorBloodGroupLabel;
+        private System.Windows.Forms.Label donorNameLabel;
+        private System.Windows.Forms.Label contactNoLabel;
+        private System.Windows.Forms.Label addressLabel;
+        private System.Windows.Forms.Label bloodGroupLabel;
+        private System.Windows.Forms.Label DonationDateLabel;
+        private System.Windows.Forms.Label DOBLabel;
+        private System.Windows.Forms.Label sexLabel;
+        private System.Windows.Forms.Label welcomeUserNameLabel;
+        private System.Windows.Forms.Label welcomeLabel;
+        private System.Windows.Forms.Label nameLabel;
+        private System.Windows.Forms.PictureBox donorPictureBox;
+        private MetroFramework.Controls.MetroButton uploadImgMetroButton;
+        private System.Windows.Forms.Label donorSexLabel;
+        private System.Windows.Forms.Label donorDOBLabel;
     }
 }
 

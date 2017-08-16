@@ -3,6 +3,7 @@ using System.Drawing;
 using System.Globalization;
 using System.Windows.Forms;
 using System.Linq;
+using System.Collections.Generic;
 
 namespace Blood_Donate_Management_System
 {
@@ -12,6 +13,7 @@ namespace Blood_Donate_Management_System
         private int counter = 0;
         private String[] imagePaths = new string[10];
         private string gender;
+        private int donorInfoPanelCount = 0;
         public Form1()
         {
             InitializeComponent();
@@ -57,11 +59,12 @@ namespace Blood_Donate_Management_System
         }
         private void timer1_Tick1(object sender, EventArgs e)
         {
-            if (newPasswordTxtBox.Text !=""&&confirmPasswordTxtBox.Text!="")
-            {  if(newPasswordTxtBox.Text!=confirmPasswordTxtBox.Text)
-                   passConfiramtionLabel.Visible = true;
-               else
-                   passConfiramtionLabel.Visible = false;
+            if (newPasswordTxtBox.Text != "" && confirmPasswordTxtBox.Text != "")
+            {
+                if (newPasswordTxtBox.Text != confirmPasswordTxtBox.Text)
+                    passConfiramtionLabel.Visible = true;
+                else
+                    passConfiramtionLabel.Visible = false;
             }
             else
                 passConfiramtionLabel.Visible = false;
@@ -69,16 +72,16 @@ namespace Blood_Donate_Management_System
             long number;
             bool flag = Int64.TryParse(mobileNumberTxtBox.Text, out number);
 
-            if(flag==false && mobileNumberTxtBox.Text!="")
+            if (flag == false && mobileNumberTxtBox.Text != "")
                 mbNovalidationLabel.Visible = true;
             else
                 mbNovalidationLabel.Visible = false;
 
-            if(userNameTxtBox.Text!="")
+            if (userNameTxtBox.Text != "")
             {
                 using (var context = new BDMSDBEntities())
                 {
-              
+
                     if (context.Users.Any(o => o.userName == userNameTxtBox.Text))
                     {
                         userNameValidityLabel.Visible = true;
@@ -86,10 +89,10 @@ namespace Blood_Donate_Management_System
                     else
                         userNameValidityLabel.Visible = false;
                 }
-               
+
 
             }
-           
+
 
 
 
@@ -114,38 +117,10 @@ namespace Blood_Donate_Management_System
             createAccountButton.Visible = flag;
         }
 
-        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void metroButton1_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void menuStrip1_MouseEnter(object sender, EventArgs e)
-
-        {
 
 
-            toolStripMenuItem1.BackColor = Color.Red;
 
-        }
 
-        private void metroContextMenu1_Opening(object sender, System.ComponentModel.CancelEventArgs e)
-        {
-
-        }
-
-        private void sylhetToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void metroButton5_Click(object sender, EventArgs e)
         {
@@ -205,13 +180,6 @@ namespace Blood_Donate_Management_System
                 };
                 using (var context = new BDMSDBEntities())
                 {
-
-                    context.People.Add(newPerson);
-                    context.Users.Add(newUser);
-                    context.SaveChanges();
-                }
-                using (var context = new BDMSDBEntities())
-                {
                     try
                     {
                         context.Addresses.Add(userAddress);
@@ -219,13 +187,23 @@ namespace Blood_Donate_Management_System
                     }
                     catch (Exception ex) { }
                 }
+                using (var context = new BDMSDBEntities())
+                {
 
-            }catch(Exception ex){
+                    context.People.Add(newPerson);
+                    context.Users.Add(newUser);
+                    context.SaveChanges();
+                }
+              
+
+            }
+            catch (Exception ex)
+            {
 
             }
             finally { }
 
-        
+
 
 
         }
@@ -242,34 +220,87 @@ namespace Blood_Donate_Management_System
 
         private void signInBtn_Click(object sender, EventArgs e)
         {
-            using(BDMSDBEntities context = new BDMSDBEntities())
-            {   
+            using (BDMSDBEntities context = new BDMSDBEntities())
+            {
                 try
                 {
-                   
+
                     string pass = context.Users.FirstOrDefault(x => x.userName == loginUserNameTxtBox.Text).password.ToString();
 
                     if (pass != passwordTxtBox.Text)
                     {
                         loginErrorMsgLabel.Text = "Password is incorrect!";
                         loginErrorMsgLabel.Visible = true;
- 
+
                     }
                     else
                         loginErrorMsgLabel.Visible = false;
                 }
-                catch(Exception ex) {
+                catch (Exception ex)
+                {
                     loginErrorMsgLabel.Text = "Username is invalid!";
                     loginErrorMsgLabel.Visible = true;
                 }
             }
         }
 
-    
-    
+        private void dhakaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (var context = new BDMSDBEntities())
+            {
+               List<string> list = (from user in context.People
+                                    where user.Address.district.Equals("Dhaka")
+                                    select user.userName).ToList();
+                foreach(var v in list)
+                {
+                    findDonorPanel.Visible = true;
+                    initialiseFirstDonorInfoPanel();
+                    initialiseDonorInfoPanel();
+
+                }
+               
+            }
+        }
+
+        private void initialiseDonorInfoPanel()
+        {
+
+            Panel pnl = new Panel();
+
+            Control c2 = new Control();
+            pnl.Location = new Point(8, 37+(donorInfoPanelCount++*118));
+            pnl.BorderStyle = panel3.BorderStyle;
+            pnl.BackColor = panel3.BackColor;
+            pnl.Size = panel3.Size;
+            pnl.Visible = true;
+            foreach (Control c in panel3.Controls)
+            {
+                if (c.GetType() == typeof(TextBox))
+                    c2 = new TextBox();
+                if (c.GetType() == typeof(Button))
+                    c2 = new Button();
+                if (c.GetType() == typeof(Label))
+                    c2 = new Label();
+            
+                c2.Location = c.Location;
+                c2.Size = c.Size;
+                c2.Font = c.Font;
+                c2.Text = c.Text;
+                c2.Name = c.Name;
+                pnl.Controls.Add(c2);
+                this.findDonorPanel.Controls.Add(pnl);
+            }
+
+        }
+
+        private void initialiseFirstDonorInfoPanel()
+        {
+            if (donorInfoPanelCount == 0)
+            {
+                donorInfoPanelCount++;
+                panel3.Visible = true;
+            }
+        }
     }
-
-
-
 }
 

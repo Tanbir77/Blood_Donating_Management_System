@@ -31,6 +31,9 @@ namespace Blood_Donate_Management_System
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.loginErrorMsgLabel = new MetroFramework.Controls.MetroLabel();
             this.userNameValidityLabel = new MetroFramework.Controls.MetroLabel();
             this.mbNovalidationLabel = new MetroFramework.Controls.MetroLabel();
             this.passConfiramtionLabel = new MetroFramework.Controls.MetroLabel();
@@ -56,7 +59,6 @@ namespace Blood_Donate_Management_System
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.metroButton5 = new MetroFramework.Controls.MetroButton();
-            this.metroButton4 = new MetroFramework.Controls.MetroButton();
             this.metroButton3 = new MetroFramework.Controls.MetroButton();
             this.metroButton2 = new MetroFramework.Controls.MetroButton();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -69,15 +71,20 @@ namespace Blood_Donate_Management_System
             this.barisalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rangpurToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.metroButton1 = new MetroFramework.Controls.MetroButton();
-            this.loginErrorMsgLabel = new MetroFramework.Controls.MetroLabel();
+            this.metroButton4 = new MetroFramework.Controls.MetroButton();
+            this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
+            this.findDonorPanel = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
+            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
+            this.findDonorPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.findDonorPanel);
             this.panel1.Controls.Add(this.loginErrorMsgLabel);
             this.panel1.Controls.Add(this.userNameValidityLabel);
             this.panel1.Controls.Add(this.mbNovalidationLabel);
@@ -106,6 +113,38 @@ namespace Blood_Donate_Management_System
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(683, 385);
             this.panel1.TabIndex = 0;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.label1);
+            this.panel3.Location = new System.Drawing.Point(8, 37);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(666, 82);
+            this.panel3.TabIndex = 2;
+            this.panel3.Visible = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(222, 40);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(143, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "label1 eeherhedrwe4rtww  et";
+            // 
+            // loginErrorMsgLabel
+            // 
+            this.loginErrorMsgLabel.FontSize = MetroFramework.MetroLabelSize.Small;
+            this.loginErrorMsgLabel.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.loginErrorMsgLabel.ForeColor = System.Drawing.Color.Red;
+            this.loginErrorMsgLabel.Location = new System.Drawing.Point(284, 162);
+            this.loginErrorMsgLabel.Name = "loginErrorMsgLabel";
+            this.loginErrorMsgLabel.Size = new System.Drawing.Size(188, 15);
+            this.loginErrorMsgLabel.TabIndex = 52;
+            this.loginErrorMsgLabel.Text = "Username or password is invalid!";
+            this.loginErrorMsgLabel.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.loginErrorMsgLabel.UseCustomForeColor = true;
+            this.loginErrorMsgLabel.Visible = false;
             // 
             // userNameValidityLabel
             // 
@@ -698,11 +737,11 @@ namespace Blood_Donate_Management_System
             // 
             this.panel2.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.panel2.Controls.Add(this.metroButton5);
-            this.panel2.Controls.Add(this.metroButton4);
             this.panel2.Controls.Add(this.metroButton3);
             this.panel2.Controls.Add(this.metroButton2);
             this.panel2.Controls.Add(this.menuStrip1);
             this.panel2.Controls.Add(this.metroButton1);
+            this.panel2.Controls.Add(this.metroButton4);
             this.panel2.Location = new System.Drawing.Point(0, 55);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(683, 33);
@@ -724,22 +763,6 @@ namespace Blood_Donate_Management_System
             this.metroButton5.UseSelectable = true;
             this.metroButton5.UseStyleColors = true;
             this.metroButton5.Click += new System.EventHandler(this.metroButton5_Click);
-            // 
-            // metroButton4
-            // 
-            this.metroButton4.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.metroButton4.FontSize = MetroFramework.MetroButtonSize.Medium;
-            this.metroButton4.FontWeight = MetroFramework.MetroButtonWeight.Regular;
-            this.metroButton4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.metroButton4.Location = new System.Drawing.Point(366, 0);
-            this.metroButton4.Name = "metroButton4";
-            this.metroButton4.Size = new System.Drawing.Size(88, 35);
-            this.metroButton4.TabIndex = 5;
-            this.metroButton4.Text = "Contact";
-            this.metroButton4.UseCustomBackColor = true;
-            this.metroButton4.UseCustomForeColor = true;
-            this.metroButton4.UseSelectable = true;
-            this.metroButton4.UseStyleColors = true;
             // 
             // metroButton3
             // 
@@ -816,6 +839,7 @@ namespace Blood_Donate_Management_System
             this.dhakaToolStripMenuItem.Name = "dhakaToolStripMenuItem";
             this.dhakaToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.dhakaToolStripMenuItem.Text = "Dhaka";
+            this.dhakaToolStripMenuItem.Click += new System.EventHandler(this.dhakaToolStripMenuItem_Click);
             // 
             // khulnaToolStripMenuItem
             // 
@@ -840,7 +864,6 @@ namespace Blood_Donate_Management_System
             this.sylhetToolStripMenuItem.Name = "sylhetToolStripMenuItem";
             this.sylhetToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.sylhetToolStripMenuItem.Text = "Sylhet";
-            this.sylhetToolStripMenuItem.Click += new System.EventHandler(this.sylhetToolStripMenuItem_Click);
             // 
             // rajshahiToolStripMenuItem
             // 
@@ -881,21 +904,34 @@ namespace Blood_Donate_Management_System
             this.metroButton1.UseCustomForeColor = true;
             this.metroButton1.UseSelectable = true;
             this.metroButton1.UseStyleColors = true;
-            this.metroButton1.Click += new System.EventHandler(this.metroButton1_Click);
             // 
-            // loginErrorMsgLabel
+            // metroButton4
             // 
-            this.loginErrorMsgLabel.FontSize = MetroFramework.MetroLabelSize.Small;
-            this.loginErrorMsgLabel.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.loginErrorMsgLabel.ForeColor = System.Drawing.Color.Red;
-            this.loginErrorMsgLabel.Location = new System.Drawing.Point(284, 162);
-            this.loginErrorMsgLabel.Name = "loginErrorMsgLabel";
-            this.loginErrorMsgLabel.Size = new System.Drawing.Size(188, 15);
-            this.loginErrorMsgLabel.TabIndex = 52;
-            this.loginErrorMsgLabel.Text = "Username or password is invalid!";
-            this.loginErrorMsgLabel.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.loginErrorMsgLabel.UseCustomForeColor = true;
-            this.loginErrorMsgLabel.Visible = false;
+            this.metroButton4.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.metroButton4.FontSize = MetroFramework.MetroButtonSize.Medium;
+            this.metroButton4.FontWeight = MetroFramework.MetroButtonWeight.Regular;
+            this.metroButton4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.metroButton4.Location = new System.Drawing.Point(366, 0);
+            this.metroButton4.Name = "metroButton4";
+            this.metroButton4.Size = new System.Drawing.Size(88, 35);
+            this.metroButton4.TabIndex = 5;
+            this.metroButton4.Text = "Contact";
+            this.metroButton4.UseCustomBackColor = true;
+            this.metroButton4.UseCustomForeColor = true;
+            this.metroButton4.UseSelectable = true;
+            this.metroButton4.UseStyleColors = true;
+            // 
+            // findDonorPanel
+            //
+            this.findDonorPanel.HorizontalScroll.Maximum = 0;
+            this.findDonorPanel.VerticalScroll.Visible = false;
+            this.findDonorPanel.AutoScroll = true;
+            this.findDonorPanel.Controls.Add(this.panel3);
+            this.findDonorPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.findDonorPanel.Location = new System.Drawing.Point(0, 0);
+            this.findDonorPanel.Name = "findDonorPanel";
+            this.findDonorPanel.Size = new System.Drawing.Size(683, 385);
+            this.findDonorPanel.TabIndex = 53;
             // 
             // Form1
             // 
@@ -913,10 +949,13 @@ namespace Blood_Donate_Management_System
             this.TextAlign = MetroFramework.Forms.MetroFormTextAlign.Center;
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.findDonorPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -967,6 +1006,10 @@ namespace Blood_Donate_Management_System
         private MetroFramework.Controls.MetroLabel mbNovalidationLabel;
         private MetroFramework.Controls.MetroLabel userNameValidityLabel;
         private MetroFramework.Controls.MetroLabel loginErrorMsgLabel;
+        private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel findDonorPanel;
     }
 }
 

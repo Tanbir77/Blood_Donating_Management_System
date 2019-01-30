@@ -15,8 +15,8 @@ namespace Blood_Donate_Management_System
         static void Main()
         {
             Application.EnableVisualStyles();
-            // Application.SetCompatibleTextRenderingDefault(false);
-            // Application.Run(new Form1());
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new Form1());
             Console.WriteLine("FSDFDSF");
 
         }
